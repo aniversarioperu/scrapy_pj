@@ -1,4 +1,4 @@
-PJ has released thousands for veredicts from the Supreme Court. All are in PDF
+PJ has released thousands of veredicts from the Supreme Court. All are in PDF
 format (images, not text).
 
 Scrape (scrapy? beautifulSoup?) to download documents from the Peruvian
