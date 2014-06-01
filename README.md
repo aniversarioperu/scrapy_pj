@@ -16,3 +16,10 @@ Judicial System:
 * OCR PDF
 * add to database
 * profit
+
+# Set up Tor
+If using Ubuntu, add this line to ``/etc/apt/sources.list``:
+
+```bash
+deb http://deb.torproject.org/torproject.org saucy main
+```
