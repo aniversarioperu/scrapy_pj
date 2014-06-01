@@ -22,4 +22,12 @@ If using Ubuntu, add this line to ``/etc/apt/sources.list``:
 
 ```bash
 deb http://deb.torproject.org/torproject.org saucy main
+gpg --keyserver keys.gnupg.net --recv 886DDD89
+gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
+apt-get update
+apt-get install deb.torproject.org-keyring
+apt-get install tor
 ```
+More info here <https://www.torproject.org/docs/tor-doc-unix.html.en#using>
+
+Install polipo, more info [here](http://pkmishra.github.io/blog/2013/03/18/how-to-run-scrapy-with-TOR-and-multiple-browser-agents-part-1-mac/).
