@@ -13,29 +13,53 @@ class Search_PJ(Spider):
     target_url = "http://jurisprudencia.pj.gob.pe/jurisprudenciaweb/faces/page/resolucion-busqueda-resultado.xhtml"
 
     def start_requests(self):
-        yield Request(self.target_url, cookies={'JSESSIONID': 'S99PW04VLX~AqMf5d1vHg+KP4rRCp0snqs5.a0c2e3f5-7bb5-3b43-be3f-aceabf94c2c1'
-            }, callback=self.parse)
+        yield Request(self.target_url,  callback=self.parse)
 
     def parse(self, response):
-        print "<br>response.body", response.body
-        return [FormRequest(url=self.target_url,
+        print "<br>response.headers", response.headers
+        return [FormRequest.from_response(response,
                 formdata={
                   'formBusqueda:buEspecialidadInput': 'Civil',
                   'formBusqueda:buAnioInput':'2013',
                     },
-                cookies=[{'name': 'JSESSIONID', 'value': 'S99PW04VLX~AqMf5d1vHg+KP4rRCp0snqs5.a0c2e3f5-7bb5-3b43-be3f-aceabf94c2c1'}],
+                dont_click=True,
+                #cookies=[self.make_cookie(response)],
                 callback = self.after_search)]
 
     def after_search(self, response):
+        print "<br>response.headers", response.headers
         print "<br>response.body", response.body
 
     def make_cookie(self, response):
         tmp = response.headers['Set-Cookie']
+        tmp = tmp.split(";")[0]
+        tmp = tmp.split("=")[1]
+        mycookies = []
+        cookies = {}
+        cookies['name'] = 'JSESSIONID'
+        cookies['value'] = tmp
+        cookies['domain'] = "jurisprudencia.pj.gob.pe"
+        cookies['path'] = "/jurisprudenciaweb"
+        """
+        mycookies.append(cookies)
+        tmp = {'name': '__utma',
+                'value':'224540507.1467503965.1401198857.1401198857.1401222458.2',
+                'domain': '.pj.gob.pe',
+                'path': '/'}
+        mycookies.append(tmp)
+        tmp = {'name': '__utmz',
+                'value':'224540507.1401222458.2.2.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=http://www.pj.gob.pe/',
+                'domain': '.pj.gob.pe',
+                'path': '/'}
+        mycookies.append(tmp)
+
         cookies = {}
         cookies['name'] = 'JSESSIONID'
         tmp = tmp.split(";")
         cookies['value'] = tmp[0].split("=")[1]
-
-        cookies = {}
-        cookies['JSESSIONID'] = 'S99PW04VLX~zc+5l2lit5jlYB1zBNQvvYYy.86439558-da66-3a1b-af8b-0355e5d4e948'
+        cookies['domain'] = "jurisprudencia.pj.gob.pe"
+        cookies['path'] = "/jurisprudenciaweb"
+        """
+        print "cookies:->", cookies
         return cookies
+        #return mycookies
