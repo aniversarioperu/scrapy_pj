@@ -1,6 +1,5 @@
-{'Date': ['Mon, 02 Jun 2014 07:30:45 GMT'], 'Set-Cookie': ['JSESSIONID=S99PW03VLX~cuvDa2ggv-60SAq+MOSDLAQg.64685f25-e70c-3284-b7e1-c0a27a0ce8d3; Path=/jurisprudenciaweb'], 'Strict-Transport-Security': ['max-age=15768000'], 'Content-Type': ['text/html;charset=UTF-8'], 'X-Powered-By': ['JSF/2.0']}
-<br><br>---<br>
-http://jurisprudencia.pj.gob.pe/jurisprudenciaweb/faces/page/resolucion-busqueda-general.xhtml
+{'Date': ['Mon, 02 Jun 2014 09:18:49 GMT'], 'Age': ['1'], 'Strict-Transport-Security': ['max-age=15768000'], 'Content-Type': ['text/html;charset=UTF-8'], 'X-Powered-By': ['JSF/2.0']} <br><br>
+{'download_timeout': 180, 'download_latency': 1.2222988605499268, 'proxy': 'http://127.0.0.1:8123', 'download_slot': 'jurisprudencia.pj.gob.pe'} <br><br>
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
@@ -9,12 +8,18 @@ http://jurisprudencia.pj.gob.pe/jurisprudenciaweb/faces/page/resolucion-busqueda
 		<link rel="stylesheet" href="/jurisprudenciaweb/css/estilos.css" type="text/css" />
 		<script type="text/javascript" src="/jurisprudenciaweb/js/jquery-1.3.2.min.js"></script>
 		<script type="text/javascript" src="/jurisprudenciaweb/js/general.js"></script><link type="text/css" rel="stylesheet" href="/jurisprudenciaweb/org.richfaces.resources/javax.faces.resource/org.richfaces.staticResource/4.2.2.Final/PackedCompressed/ruby/skinning.css" /><script type="text/javascript" src="/jurisprudenciaweb/faces/javax.faces.resource/jsf.js?ln=javax.faces"></script><script type="text/javascript" src="/jurisprudenciaweb/org.richfaces.resources/javax.faces.resource/org.richfaces.staticResource/4.2.2.Final/PackedCompressed/jquery.js"></script><script type="text/javascript" src="/jurisprudenciaweb/org.richfaces.resources/javax.faces.resource/org.richfaces.staticResource/4.2.2.Final/PackedCompressed/packed/packed.js"></script><link type="text/css" rel="stylesheet" href="/jurisprudenciaweb/org.richfaces.resources/javax.faces.resource/org.richfaces.staticResource/4.2.2.Final/PackedCompressed/ruby/packed/packed.css" /><style type="text/css">
+		        .select-big-width input{width: 225px;}
+				.select-small-width input[type="text"]{width: 80px;}
+		    </style><style type="text/css">
 									    .mySelectStyle input{
-												width: 170px;
-												height: 25px;
-												padding-left: 5px;
-												line-height:25px;
+									        width: 80px;
 									    }
+									    
+									    .alignmentLeft {
+										 text-align : left;
+										 border: 1px solid black;
+										 background-color: orange;
+										}
 									</style></head><body>
 		<div align="center">
 			<div style="width:100%; height:132px; background-color:#FFF;">
@@ -30,7 +35,7 @@ http://jurisprudencia.pj.gob.pe/jurisprudenciaweb/faces/page/resolucion-busqueda
 		</div>
 		<table border="0" width="100%" cellpadding="0" cellspacing="0"> 
 			<tr> 
-				<td height="30px" valign="middle"><b><span class="data"></span></b></td>
+				<td height="30px" valign="middle"><b><span class="data">BÚSQUEDA DE RESOLUCIONES </span></b></td>
 			</tr>
 			<tr> 
 				<td valign="top" align="center"><div id="popupMessages" style="visibility: hidden;"><div class="rf-pp-shade" id="popupMessages_shade" style="z-index:100;"><button class="rf-pp-btn" id="popupMessagesFirstHref"></button></div><div class="rf-pp-cntr " id="popupMessages_container" style="position: fixed; z-index:100; "><div class="rf-pp-shdw" id="popupMessages_shadow"></div><div class="rf-pp-cnt-scrlr" id="popupMessages_content_scroller"><div class="rf-pp-cnt" id="popupMessages_content">
@@ -43,43 +48,871 @@ http://jurisprudencia.pj.gob.pe/jurisprudenciaweb/faces/page/resolucion-busqueda
 							</td>
 						</tr>
 					</table></div></div></div><script type="text/javascript">new RichFaces.ui.PopupPanel("popupMessages",{"autosized":true} );</script></div><span id="j_idt13"><span style="display:none" class="rf-st-start"></span><span class="rf-st-stop"></span><script type="text/javascript">new RichFaces.ui.Status("j_idt13",{"onstop":function(event){.hide()},"onstart":function(event){.show()},"statusName":"processStatus"} )</script></span><div id="panelState" style="visibility: hidden;"><div class="rf-pp-shade" id="panelState_shade" style="z-index:100;"><button class="rf-pp-btn" id="panelStateFirstHref"></button></div><div class="rf-pp-cntr " id="panelState_container" style="position: fixed; z-index:100; "><div class="rf-pp-shdw" id="panelState_shadow"></div><div class="rf-pp-cnt-scrlr" id="panelState_content_scroller"><div class="rf-pp-cnt" id="panelState_content"><img src="../imagen/progressbar.gif" style="border: 0px" />Procesando</div></div></div><script type="text/javascript">new RichFaces.ui.PopupPanel("panelState",{"autosized":true} );</script></div>
-<form id="formBusqueda" name="formBusqueda" method="post" action="/jurisprudenciaweb/faces/page/resolucion-busqueda-general.xhtml" enctype="application/x-www-form-urlencoded">
+<form id="formBusqueda" name="formBusqueda" method="post" action="/jurisprudenciaweb/faces/page/resolucion-busqueda-resultado.xhtml" enctype="application/x-www-form-urlencoded">
 <input type="hidden" name="formBusqueda" value="formBusqueda" />
 
-				<div class="wrapper">
-					<div class="header">
-						<div class="bus"><input id="formBusqueda:txtBusqueda" type="text" name="formBusqueda:txtBusqueda" value="" class="txt1" maxlength="200" onkeypress="return validaTextoBusqueda(event)" title="Ingrese el texto a buscar" /><input id="formBusqueda:j_idt17" name="formBusqueda:j_idt17" onclick="jsf.util.chain(this,event,&quot;RichFaces.$('formBusqueda:panelStatus').show();&quot;,&quot;RichFaces.ajax(\&quot;formBusqueda:j_idt17\&quot;,event,{\&quot;parameters\&quot;:{\&quot;forward\&quot;:\&quot;buscar\&quot;,\&quot;formBusqueda:j_idt19\&quot;:\&quot;21\&quot;,\&quot;formBusqueda:j_idt20\&quot;:\&quot;ASC\&quot;} ,\&quot;incId\&quot;:\&quot;1\&quot;} )&quot;);return false;" type="image" src="../imagen/b1.gif" />
-						</div>
-					</div>
-					<div align="center">
-						<table align="center">
-							<tr>
-								<td colspan="2" height="28px"></td>
-							</tr>
-							<tr>
-								<td class="txt" height="25px">Corte:</td>
-								<td><div class="rf-sel mySelectStyle" id="formBusqueda:cmbCorte"><span class="rf-sel-cntr"><input id="formBusqueda:cmbCorteselValue" name="formBusqueda:cmbCorte" type="hidden" /><input autocomplete="off" class="rf-sel-inp rf-sel-dflt-lbl" disabled="disabled" id="formBusqueda:cmbCorteInput" name="formBusqueda:cmbCorteInput" readonly="readonly" type="text" value="Suprema" title="Suprema" /><span class="rf-sel-btn rf-sel-btn-dis" id="formBusqueda:cmbCorteButton"><span class="rf-sel-btn-arrow"></span></span></span><div class="rf-sel-lst-cord" id="formBusqueda:cmbCorteList"><div class="rf-sel-shdw"><div class="rf-sel-shdw-t"></div><div class="rf-sel-shdw-l"></div><div class="rf-sel-shdw-r"></div><div class="rf-sel-shdw-b"></div><div class="rf-sel-lst-dcrtn"><div class="rf-sel-lst-scrl" style="min-height: 20px;max-height: 100px;width: 190px"><div id="formBusqueda:cmbCorteItems"><div id="formBusqueda:cmbCorteItem0" class="rf-sel-opt">Suprema</div><div id="formBusqueda:cmbCorteItem1" class="rf-sel-opt">Superior</div></div></div></div></div></div><script type="text/javascript">new RichFaces.ui.Select("formBusqueda:cmbCorte", {"clientSelectItems":[{ 'id' : "formBusqueda:cmbCorteItem0" , 'label' : "Suprema", 'value' : "1"},{ 'id' : "formBusqueda:cmbCorteItem1" , 'label' : "Superior", 'value' : "2"}] ,"itemCss":"rf\u002Dsel\u002Dopt","selectItemCss":"rf\u002Dsel\u002Dsel","defaultLabel":"Suprema","disabled":true} );</script></div>
-								</td>
-							</tr>
-							<tr>
-								<td colspan="2" height="15px"></td>
-							</tr>
-							<tr>
-								<td class="txt" height="25px">N° de Expediente:</td>
-								<td><input id="formBusqueda:buNroExpediente" type="text" name="formBusqueda:buNroExpediente" value="" class="txt2" maxlength="12" onkeypress="return validaNroExpediente(event)" title="Ingrese Nro Expediente 000000-yyyy" />
-								</td>
-							</tr>
-							<tr>
-								<td colspan="2" height="10px"></td>
-							</tr>
-							<tr>
-								<td colspan="2" height="25px" align="right"><input id="formBusqueda:j_idt28" name="formBusqueda:j_idt28" onclick="jsf.util.chain(this,event,&quot;RichFaces.$('formBusqueda:panelStatus').show();&quot;,&quot;RichFaces.ajax(\&quot;formBusqueda:j_idt28\&quot;,event,{\&quot;parameters\&quot;:{\&quot;forward\&quot;:\&quot;buscar_criterios\&quot;} ,\&quot;incId\&quot;:\&quot;1\&quot;} )&quot;);return false;" value="Búsqueda Especializada" class="btnbuscar" type="submit" /><input id="formBusqueda:j_idt30" name="formBusqueda:j_idt30" onclick="jsf.util.chain(this,event,&quot;RichFaces.$('formBusqueda:panelStatus').show();&quot;,&quot;RichFaces.ajax(\&quot;formBusqueda:j_idt30\&quot;,event,{\&quot;parameters\&quot;:{\&quot;forward\&quot;:\&quot;buscar\&quot;,\&quot;formBusqueda:j_idt32\&quot;:\&quot;21\&quot;,\&quot;formBusqueda:j_idt33\&quot;:\&quot;ASC\&quot;} ,\&quot;incId\&quot;:\&quot;1\&quot;} )&quot;);return false;" value="Buscar" class="btnbuscar" type="submit" /><input type="submit" name="formBusqueda:j_idt34" value="Limpiar" class="btncancelar" />
-                              		 
-								</td>
-							</tr>
-						</table>
-					</div>
-				</div><div id="formBusqueda:panelStatus" style="visibility: hidden;"><div class="rf-pp-shade" id="formBusqueda:panelStatus_shade" style="z-index:100;"><button class="rf-pp-btn" id="formBusqueda:panelStatusFirstHref"></button></div><div class="rf-pp-cntr " id="formBusqueda:panelStatus_container" style="position: fixed; z-index:100; "><div class="rf-pp-shdw" id="formBusqueda:panelStatus_shadow"></div><div class="rf-pp-cnt-scrlr" id="formBusqueda:panelStatus_content_scroller"><div class="rf-pp-cnt" id="formBusqueda:panelStatus_content"><table>
+		    <table>
+		    	<tr>
+		    		<td width="17%" height="100%" valign="top">
+		    		<table>
+		    			<tr>
+		    				<td>   </td>
+                               <td align="left" height="20px"><span class="data">Corte:</span></td>
+                             </tr> 
+                             <tr>
+                             	<td>   </td>
+                               <td align="left"><div class="rf-sel" id="formBusqueda:buCorte"><span class="rf-sel-cntr"><input id="formBusqueda:buCorteselValue" name="formBusqueda:buCorte" type="hidden" /><input autocomplete="off" class="rf-sel-inp rf-sel-dflt-lbl" disabled="disabled" id="formBusqueda:buCorteInput" name="formBusqueda:buCorteInput" readonly="readonly" type="text" value="Suprema" /><span class="rf-sel-btn rf-sel-btn-dis" id="formBusqueda:buCorteButton"><span class="rf-sel-btn-arrow"></span></span></span><div class="rf-sel-lst-cord" id="formBusqueda:buCorteList"><div class="rf-sel-shdw"><div class="rf-sel-shdw-t"></div><div class="rf-sel-shdw-l"></div><div class="rf-sel-shdw-r"></div><div class="rf-sel-shdw-b"></div><div class="rf-sel-lst-dcrtn"><div class="rf-sel-lst-scrl" style="min-height: 20px;max-height: 100px;width: 200px"><div id="formBusqueda:buCorteItems"><div id="formBusqueda:buCorteItem0" class="rf-sel-opt">-- Seleccione --</div><div id="formBusqueda:buCorteItem1" class="rf-sel-opt">Suprema</div><div id="formBusqueda:buCorteItem2" class="rf-sel-opt">Superior</div></div></div></div></div></div><script type="text/javascript">new RichFaces.ui.Select("formBusqueda:buCorte", {"clientSelectItems":[{ 'id' : "formBusqueda:buCorteItem0" , 'label' : "\u002D\u002D Seleccione \u002D\u002D", 'value' : ""},{ 'id' : "formBusqueda:buCorteItem1" , 'label' : "Suprema", 'value' : "1"},{ 'id' : "formBusqueda:buCorteItem2" , 'label' : "Superior", 'value' : "2"}] ,"itemCss":"rf\u002Dsel\u002Dopt","selectItemCss":"rf\u002Dsel\u002Dsel","defaultLabel":"Suprema","disabled":true} );</script></div>
+                               </td>
+                             </tr> 
+                             <tr>
+                               <td colspan="2" align="left"> </td>
+                             </tr> 
+		    		</table><div id="formBusqueda:j_idt25" class="rf-tbp"><input id="formBusqueda:j_idt25-value" name="formBusqueda:j_idt25-value" type="hidden" value="j_idt26" /><script type="text/javascript">new RichFaces.ui.TabPanel("formBusqueda:j_idt25",{"ajax":{"incId":"1"} ,"activeItem":"j_idt26","isKeepHeight":false,"cycledSwitching":false} )</script><div class="rf-tab-hdr-tabline-vis rf-tab-hdr-tabline-top"><table class="rf-tab-hdr-tabs" cellspacing="0"><tbody><tr><td style="padding-left: 5px;" class="rf-tab-hdr-spcr"><br /></td><td id="formBusqueda:j_idt26:header:inactive" class="rf-tab-hdr rf-tab-hdr-inact rf-tab-hdr-top" style="display : none"><span class="rf-tab-lbl">Filtro de Información</span></td><td id="formBusqueda:j_idt26:header:active" class="rf-tab-hdr rf-tab-hdr-act rf-tab-hdr-top" style=""><span class="rf-tab-lbl">Filtro de Información</span></td><td id="formBusqueda:j_idt26:header:disabled" class="rf-tab-hdr rf-tab-hdr-dis rf-tab-hdr-top" style="display : none"><span class="rf-tab-lbl">Filtro de Información</span></td><td style="" class="rf-tab-hdr-spcr rf-tab-hortab-tabspcr-wdh"><br /></td><td style="padding-right: 5px; width: 100%;" class="rf-tab-hdr-spcr"><br /></td></tr></tbody></table><div class="rf-tab-hdr-scrl-lft rf-tab-hdn">«</div><div class="rf-tab-hdr-tablst rf-tab-hdn">↓</div><div class="rf-tab-hdr-scrl-rgh rf-tab-hdn">»</div></div><div class="rf-tab-hdr-brd"></div><div id="formBusqueda:j_idt26" class="rf-tab"><div class="rf-tab-cnt" id="formBusqueda:j_idt26:content">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								  <tr>
+									<td> </td>
+									<td valign="top">
+			                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                             <tr>
+                               <td colspan="2" align="left" height="30px"><span class="data">Especialidad:</span></td>
+                             </tr> 
+                             <tr>
+                               <td colspan="2" align="left"><div class="rf-sel select-big-width" id="formBusqueda:buEspecialidad"><span class="rf-sel-cntr"><input id="formBusqueda:buEspecialidadselValue" name="formBusqueda:buEspecialidad" type="hidden" value="1" /><input autocomplete="off" class="rf-sel-inp" id="formBusqueda:buEspecialidadInput" name="formBusqueda:buEspecialidadInput" readonly="readonly" type="text" value="Civil" /><span class="rf-sel-btn" id="formBusqueda:buEspecialidadButton"><span class="rf-sel-btn-arrow"></span></span></span><div class="rf-sel-lst-cord" id="formBusqueda:buEspecialidadList"><div class="rf-sel-shdw"><div class="rf-sel-shdw-t"></div><div class="rf-sel-shdw-l"></div><div class="rf-sel-shdw-r"></div><div class="rf-sel-shdw-b"></div><div class="rf-sel-lst-dcrtn"><div class="rf-sel-lst-scrl" style="min-height: 20px;max-height: 100px;width: 230px"><div id="formBusqueda:buEspecialidadItems"><div id="formBusqueda:buEspecialidadItem0" class="rf-sel-opt">-- Todos --</div><div id="formBusqueda:buEspecialidadItem1" class="rf-sel-opt">Civil</div><div id="formBusqueda:buEspecialidadItem2" class="rf-sel-opt">Comercial</div><div id="formBusqueda:buEspecialidadItem3" class="rf-sel-opt">Contencioso Administrativo</div><div id="formBusqueda:buEspecialidadItem4" class="rf-sel-opt">Familia Civil</div><div id="formBusqueda:buEspecialidadItem5" class="rf-sel-opt">Familia Tutelar</div><div id="formBusqueda:buEspecialidadItem6" class="rf-sel-opt">Familia Penal</div><div id="formBusqueda:buEspecialidadItem7" class="rf-sel-opt">Contencioso Adm. Laboral</div><div id="formBusqueda:buEspecialidadItem8" class="rf-sel-opt">Contencioso Adm. Previsional</div><div id="formBusqueda:buEspecialidadItem9" class="rf-sel-opt">Laboral</div><div id="formBusqueda:buEspecialidadItem10" class="rf-sel-opt">Penal</div><div id="formBusqueda:buEspecialidadItem11" class="rf-sel-opt">Revisión de Procedimiento Coactivo</div><div id="formBusqueda:buEspecialidadItem12" class="rf-sel-opt">Constitucional</div></div></div></div></div></div><script type="text/javascript">new RichFaces.ui.Select("formBusqueda:buEspecialidad", {"clientSelectItems":[{ 'id' : "formBusqueda:buEspecialidadItem0" , 'label' : "\u002D\u002D Todos \u002D\u002D", 'value' : "0"},{ 'id' : "formBusqueda:buEspecialidadItem1" , 'label' : "Civil", 'value' : "1"},{ 'id' : "formBusqueda:buEspecialidadItem2" , 'label' : "Comercial", 'value' : "2"},{ 'id' : "formBusqueda:buEspecialidadItem3" , 'label' : "Contencioso Administrativo", 'value' : "3"},{ 'id' : "formBusqueda:buEspecialidadItem4" , 'label' : "Familia Civil", 'value' : "4"},{ 'id' : "formBusqueda:buEspecialidadItem5" , 'label' : "Familia Tutelar", 'value' : "5"},{ 'id' : "formBusqueda:buEspecialidadItem6" , 'label' : "Familia Penal", 'value' : "6"},{ 'id' : "formBusqueda:buEspecialidadItem7" , 'label' : "Contencioso Adm. Laboral", 'value' : "7"},{ 'id' : "formBusqueda:buEspecialidadItem8" , 'label' : "Contencioso Adm. Previsional", 'value' : "8"},{ 'id' : "formBusqueda:buEspecialidadItem9" , 'label' : "Laboral", 'value' : "9"},{ 'id' : "formBusqueda:buEspecialidadItem10" , 'label' : "Penal", 'value' : "10"},{ 'id' : "formBusqueda:buEspecialidadItem11" , 'label' : "Revisión de Procedimiento Coactivo", 'value' : "11"},{ 'id' : "formBusqueda:buEspecialidadItem12" , 'label' : "Constitucional", 'value' : "12"}] ,"itemCss":"rf\u002Dsel\u002Dopt","selectItemCss":"rf\u002Dsel\u002Dsel","onselectitem":function(event){RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"selectitem","org.richfaces.ajax.component":"formBusqueda:buEspecialidad"} ,"sourceId":this} )},"defaultLabel":"\u002D\u002D Todos \u002D\u002D"} );</script></div>
+                               </td>
+                             </tr> 
+                              <tr>
+                               <td colspan="2" align="left" height="30px"><span class="data">Nuevo Código procesal Penal:</span><input id="formBusqueda:buNcpp" type="checkbox" name="formBusqueda:buNcpp" title="Se activa cuando la especialidad es Penal" disabled="disabled" /></td>
+                             </tr>
+                              <tr>
+                               <td colspan="2" align="left" height="30px"><span class="data">Nueva Ley Procesal de Trabajo:</span><input id="formBusqueda:buNlpt" type="checkbox" name="formBusqueda:buNlpt" title="Se activa cuando la especialidad es Laboral" disabled="disabled" /></td>
+                             </tr>
+                              <tr>
+                               <td colspan="2" align="left" height="30px"><span class="data">Pretensión/Delito:</span></td>
+                             </tr> 
+                             <tr>
+                               <td colspan="2" align="left"><span class="rf-au" id="formBusqueda:buPretension"><input id="formBusqueda:buPretensionValue" name="formBusqueda:buPretensionValue" type="hidden" /><span><input autocomplete="off" class="rf-au-fnt rf-au-inp " id="formBusqueda:buPretensionInput" name="formBusqueda:buPretensionInput" onkeypress="return validaPretension(event);" type="text" /></span><div class="rf-au-lst-cord" id="formBusqueda:buPretensionList"><div class="rf-au-shdw"><div class="rf-au-shdw-t"></div><div class="rf-au-shdw-l"></div><div class="rf-au-shdw-r"></div><div class="rf-au-shdw-b"></div><div class="rf-au-lst-dcrtn "><div class="rf-au-lst-scrl"><div id="formBusqueda:buPretensionItems"></div></div></div></div></div><script type="text/javascript">new RichFaces.ui.Autocomplete("formBusqueda:buPretension",
+                    "formBusqueda:buPretensionInput", {"buttonId":"formBusqueda:buPretensionButton","autofill":false,"tokens":",","minChars":1} 
+                    );</script></span>
+                               </td>
+                             </tr>
+                             <tr>
+                               <td colspan="2" align="left" height="30px"><span class="data">Palabras Clave:</span></td>
+                             </tr> 
+                             <tr>
+                               <td colspan="2" align="left"><span class="rf-au" id="formBusqueda:buPalabraClave"><input id="formBusqueda:buPalabraClaveValue" name="formBusqueda:buPalabraClaveValue" type="hidden" /><span><input autocomplete="off" class="rf-au-fnt rf-au-inp " id="formBusqueda:buPalabraClaveInput" name="formBusqueda:buPalabraClaveInput" onkeypress="return validaPalabraClave(event)" type="text" /></span><div class="rf-au-lst-cord" id="formBusqueda:buPalabraClaveList"><div class="rf-au-shdw"><div class="rf-au-shdw-t"></div><div class="rf-au-shdw-l"></div><div class="rf-au-shdw-r"></div><div class="rf-au-shdw-b"></div><div class="rf-au-lst-dcrtn "><div class="rf-au-lst-scrl"><div id="formBusqueda:buPalabraClaveItems"></div></div></div></div></div><script type="text/javascript">new RichFaces.ui.Autocomplete("formBusqueda:buPalabraClave",
+                    "formBusqueda:buPalabraClaveInput", {"buttonId":"formBusqueda:buPalabraClaveButton","autofill":false,"tokens":",","minChars":1} 
+                    );</script></span>
+                               </td>
+                             </tr>
+                             <tr>
+                               <td colspan="2" align="left" height="30px"><span class="data">Órgano Jurisdiccional:</span></td>
+                             </tr> 
+                             <tr>
+                               <td colspan="2" align="left"><div class="rf-sel select-big-width" id="formBusqueda:buSala"><span class="rf-sel-cntr"><input id="formBusqueda:buSalaselValue" name="formBusqueda:buSala" type="hidden" value="0" /><input autocomplete="off" class="rf-sel-inp rf-sel-dflt-lbl" id="formBusqueda:buSalaInput" name="formBusqueda:buSalaInput" readonly="readonly" type="text" value="-- Todos --" /><span class="rf-sel-btn" id="formBusqueda:buSalaButton"><span class="rf-sel-btn-arrow"></span></span></span><div class="rf-sel-lst-cord" id="formBusqueda:buSalaList"><div class="rf-sel-shdw"><div class="rf-sel-shdw-t"></div><div class="rf-sel-shdw-l"></div><div class="rf-sel-shdw-r"></div><div class="rf-sel-shdw-b"></div><div class="rf-sel-lst-dcrtn"><div class="rf-sel-lst-scrl" style="min-height: 20px;max-height: 100px;width: 280px"><div id="formBusqueda:buSalaItems"><div id="formBusqueda:buSalaItem0" class="rf-sel-opt">Todos</div><div id="formBusqueda:buSalaItem1" class="rf-sel-opt">Sala de Derecho Constitucional y Social Permanente</div><div id="formBusqueda:buSalaItem2" class="rf-sel-opt">Sala Civil Permanente</div><div id="formBusqueda:buSalaItem3" class="rf-sel-opt">Sala Civil Transitoria</div></div></div></div></div></div><script type="text/javascript">new RichFaces.ui.Select("formBusqueda:buSala", {"clientSelectItems":[{ 'id' : "formBusqueda:buSalaItem0" , 'label' : "Todos", 'value' : "0"},{ 'id' : "formBusqueda:buSalaItem1" , 'label' : "Sala de Derecho Constitucional y Social Permanente", 'value' : "5"},{ 'id' : "formBusqueda:buSalaItem2" , 'label' : "Sala Civil Permanente", 'value' : "1"},{ 'id' : "formBusqueda:buSalaItem3" , 'label' : "Sala Civil Transitoria", 'value' : "2"}] ,"itemCss":"rf\u002Dsel\u002Dopt","selectItemCss":"rf\u002Dsel\u002Dsel","defaultLabel":"\u002D\u002D Todos \u002D\u002D"} );</script></div>
+                               </td>
+                             </tr>
+                             <tr>
+                               <td colspan="2" align="left" height="30px"><span class="data">Tipo Recurso:</span></td>
+                             </tr> 
+                             <tr>
+                               <td colspan="2" align="left"><div class="rf-sel select-big-width" id="formBusqueda:buTipoRecurso"><span class="rf-sel-cntr"><input id="formBusqueda:buTipoRecursoselValue" name="formBusqueda:buTipoRecurso" type="hidden" value="0" /><input autocomplete="off" class="rf-sel-inp rf-sel-dflt-lbl" id="formBusqueda:buTipoRecursoInput" name="formBusqueda:buTipoRecursoInput" readonly="readonly" type="text" value="-- Todos --" /><span class="rf-sel-btn" id="formBusqueda:buTipoRecursoButton"><span class="rf-sel-btn-arrow"></span></span></span><div class="rf-sel-lst-cord" id="formBusqueda:buTipoRecursoList"><div class="rf-sel-shdw"><div class="rf-sel-shdw-t"></div><div class="rf-sel-shdw-l"></div><div class="rf-sel-shdw-r"></div><div class="rf-sel-shdw-b"></div><div class="rf-sel-lst-dcrtn"><div class="rf-sel-lst-scrl" style="min-height: 20px;max-height: 100px;width: 230px"><div id="formBusqueda:buTipoRecursoItems"><div id="formBusqueda:buTipoRecursoItem0" class="rf-sel-opt">-- Todos --</div><div id="formBusqueda:buTipoRecursoItem1" class="rf-sel-opt">Apelación</div><div id="formBusqueda:buTipoRecursoItem2" class="rf-sel-opt">Casación</div></div></div></div></div></div><script type="text/javascript">new RichFaces.ui.Select("formBusqueda:buTipoRecurso", {"clientSelectItems":[{ 'id' : "formBusqueda:buTipoRecursoItem0" , 'label' : "\u002D\u002D Todos \u002D\u002D", 'value' : "0"},{ 'id' : "formBusqueda:buTipoRecursoItem1" , 'label' : "Apelación", 'value' : "19"},{ 'id' : "formBusqueda:buTipoRecursoItem2" , 'label' : "Casación", 'value' : "2"}] ,"itemCss":"rf\u002Dsel\u002Dopt","selectItemCss":"rf\u002Dsel\u002Dsel","defaultLabel":"\u002D\u002D Todos \u002D\u002D"} );</script></div>
+                               </td>
+                             </tr>
+                             <tr>
+                               <td colspan="2" align="left" height="30px"><span class="data">Tipo Resolución:</span></td>
+                             </tr> 
+                             <tr>
+                               <td colspan="2" align="left"><div class="rf-sel select-big-width" id="formBusqueda:buTipoResolucion"><span class="rf-sel-cntr"><input id="formBusqueda:buTipoResolucionselValue" name="formBusqueda:buTipoResolucion" type="hidden" value="0" /><input autocomplete="off" class="rf-sel-inp rf-sel-dflt-lbl" id="formBusqueda:buTipoResolucionInput" name="formBusqueda:buTipoResolucionInput" readonly="readonly" type="text" value="-- Todos --" /><span class="rf-sel-btn" id="formBusqueda:buTipoResolucionButton"><span class="rf-sel-btn-arrow"></span></span></span><div class="rf-sel-lst-cord" id="formBusqueda:buTipoResolucionList"><div class="rf-sel-shdw"><div class="rf-sel-shdw-t"></div><div class="rf-sel-shdw-l"></div><div class="rf-sel-shdw-r"></div><div class="rf-sel-shdw-b"></div><div class="rf-sel-lst-dcrtn"><div class="rf-sel-lst-scrl" style="min-height: 20px;max-height: 100px;width: 230px"><div id="formBusqueda:buTipoResolucionItems"><div id="formBusqueda:buTipoResolucionItem0" class="rf-sel-opt">-- Todos --</div><div id="formBusqueda:buTipoResolucionItem1" class="rf-sel-opt">Auto</div><div id="formBusqueda:buTipoResolucionItem2" class="rf-sel-opt">Ejecutoria Suprema</div></div></div></div></div></div><script type="text/javascript">new RichFaces.ui.Select("formBusqueda:buTipoResolucion", {"clientSelectItems":[{ 'id' : "formBusqueda:buTipoResolucionItem0" , 'label' : "\u002D\u002D Todos \u002D\u002D", 'value' : "0"},{ 'id' : "formBusqueda:buTipoResolucionItem1" , 'label' : "Auto", 'value' : "1"},{ 'id' : "formBusqueda:buTipoResolucionItem2" , 'label' : "Ejecutoria Suprema", 'value' : "2"}] ,"itemCss":"rf\u002Dsel\u002Dopt","selectItemCss":"rf\u002Dsel\u002Dsel","defaultLabel":"\u002D\u002D Todos \u002D\u002D"} );</script></div>
+                               </td>
+                             </tr>
+                             <tr>
+                               <td colspan="2" align="left" height="30px"><span class="data">Año:</span></td>
+                             </tr>
+                             <tr>
+                               <td colspan="2" align="left"><div class="rf-sel select-small-width" id="formBusqueda:buAnio"><span class="rf-sel-cntr"><input id="formBusqueda:buAnioselValue" name="formBusqueda:buAnio" type="hidden" value="2013" /><input autocomplete="off" class="rf-sel-inp" id="formBusqueda:buAnioInput" name="formBusqueda:buAnioInput" readonly="readonly" type="text" value="2013" /><span class="rf-sel-btn" id="formBusqueda:buAnioButton"><span class="rf-sel-btn-arrow"></span></span></span><div class="rf-sel-lst-cord" id="formBusqueda:buAnioList"><div class="rf-sel-shdw"><div class="rf-sel-shdw-t"></div><div class="rf-sel-shdw-l"></div><div class="rf-sel-shdw-r"></div><div class="rf-sel-shdw-b"></div><div class="rf-sel-lst-dcrtn"><div class="rf-sel-lst-scrl" style="min-height: 20px;max-height: 100px;width: 100px"><div id="formBusqueda:buAnioItems"><div id="formBusqueda:buAnioItem0" class="rf-sel-opt">-- Seleccione --</div><div id="formBusqueda:buAnioItem1" class="rf-sel-opt">2014</div><div id="formBusqueda:buAnioItem2" class="rf-sel-opt">2013</div><div id="formBusqueda:buAnioItem3" class="rf-sel-opt">2012</div><div id="formBusqueda:buAnioItem4" class="rf-sel-opt">2011</div><div id="formBusqueda:buAnioItem5" class="rf-sel-opt">2010</div><div id="formBusqueda:buAnioItem6" class="rf-sel-opt">2009</div><div id="formBusqueda:buAnioItem7" class="rf-sel-opt">2008</div><div id="formBusqueda:buAnioItem8" class="rf-sel-opt">2007</div><div id="formBusqueda:buAnioItem9" class="rf-sel-opt">2006</div><div id="formBusqueda:buAnioItem10" class="rf-sel-opt">2005</div><div id="formBusqueda:buAnioItem11" class="rf-sel-opt">2004</div><div id="formBusqueda:buAnioItem12" class="rf-sel-opt">2003</div><div id="formBusqueda:buAnioItem13" class="rf-sel-opt">2002</div><div id="formBusqueda:buAnioItem14" class="rf-sel-opt">2001</div><div id="formBusqueda:buAnioItem15" class="rf-sel-opt">2000</div></div></div></div></div></div><script type="text/javascript">new RichFaces.ui.Select("formBusqueda:buAnio", {"clientSelectItems":[{ 'id' : "formBusqueda:buAnioItem0" , 'label' : "\u002D\u002D Seleccione \u002D\u002D", 'value' : ""},{ 'id' : "formBusqueda:buAnioItem1" , 'label' : "2014", 'value' : "2014"},{ 'id' : "formBusqueda:buAnioItem2" , 'label' : "2013", 'value' : "2013"},{ 'id' : "formBusqueda:buAnioItem3" , 'label' : "2012", 'value' : "2012"},{ 'id' : "formBusqueda:buAnioItem4" , 'label' : "2011", 'value' : "2011"},{ 'id' : "formBusqueda:buAnioItem5" , 'label' : "2010", 'value' : "2010"},{ 'id' : "formBusqueda:buAnioItem6" , 'label' : "2009", 'value' : "2009"},{ 'id' : "formBusqueda:buAnioItem7" , 'label' : "2008", 'value' : "2008"},{ 'id' : "formBusqueda:buAnioItem8" , 'label' : "2007", 'value' : "2007"},{ 'id' : "formBusqueda:buAnioItem9" , 'label' : "2006", 'value' : "2006"},{ 'id' : "formBusqueda:buAnioItem10" , 'label' : "2005", 'value' : "2005"},{ 'id' : "formBusqueda:buAnioItem11" , 'label' : "2004", 'value' : "2004"},{ 'id' : "formBusqueda:buAnioItem12" , 'label' : "2003", 'value' : "2003"},{ 'id' : "formBusqueda:buAnioItem13" , 'label' : "2002", 'value' : "2002"},{ 'id' : "formBusqueda:buAnioItem14" , 'label' : "2001", 'value' : "2001"},{ 'id' : "formBusqueda:buAnioItem15" , 'label' : "2000", 'value' : "2000"}] ,"itemCss":"rf\u002Dsel\u002Dopt","selectItemCss":"rf\u002Dsel\u002Dsel","defaultLabel":"\u002D\u002D Seleccione \u002D\u002D"} );</script></div>
+                               </td>
+                             </tr>
+                             <tr>
+                               <td align="center" colspan="5" height="40px"><input id="formBusqueda:j_idt63" name="formBusqueda:j_idt63" onclick="RichFaces.ajax(&quot;formBusqueda:j_idt63&quot;,event,{&quot;incId&quot;:&quot;1&quot;} );return false;" value="Limpiar" type="submit" />
+			                              		   
+<script type="text/javascript" src="/jurisprudenciaweb/faces/javax.faces.resource/jsf.js?ln=javax.faces"></script>
+<input type="submit" name="formBusqueda:j_idt65" value="Buscar" onclick="jsf.util.chain(this,event,'this.form.target=\'_self\';RichFaces.$(\'panelStatus\').show();','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:j_idt65\':\'formBusqueda:j_idt65\',\'formBusqueda:j_idt66\':\'\'},\'\')');return false" />
+			                               </td>
+			                             </tr>
+			                           </table>                            
+			                        </td>
+									<td> </td>
+								  </tr>
+								</table></div><script type="text/javascript">new RichFaces.ui.Tab("formBusqueda:j_idt26",{"index":0,"leave":null,"togglePanelId":"formBusqueda:j_idt25","switchMode":"client","name":"j_idt26","enter":null,"disabled":false} )</script></div><script type="text/javascript">new RichFaces.ui.Tab("formBusqueda:j_idt26",{"index":0,"leave":null,"togglePanelId":"formBusqueda:j_idt25","switchMode":"client","name":"j_idt26","enter":null,"disabled":false} )</script></div> 
+		    		</td>
+		    		<td width="83%" valign="top">
+		    			<table width="100%">
+		    				<tr>
+		    					<td colspan="4"><table>
+<tbody>
+<tr>
+<td><input type="image" src="../imagen/b1.gif" name="formBusqueda:j_idt70" onclick="jsf.util.chain(this,event,'RichFaces.$(\'panelStatus\').show();','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:j_idt70\':\'formBusqueda:j_idt70\',\'formBusqueda:j_idt71\':\'\'},\'\')');return false" /></td>
+<td><input id="formBusqueda:txtBusqueda" type="text" name="formBusqueda:txtBusqueda" value="" class="txt3" maxlength="200" onkeypress="return validaTextoBusqueda(event)" /></td>
+<td>
+			    						<table>
+			    						<tr></td>
+</tr>
+<tr>
+<td><input type="submit" name="formBusqueda:j_idt73" value="     Búsqueda General     " onclick="jsf.util.chain(this,event,'this.form.target=\'_self\';RichFaces.$(\'panelStatus\').show();','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:j_idt73\':\'formBusqueda:j_idt73\',\'forward\':\'general\'},\'\')');return false" /></td>
+<td>
+		                            	</tr>	
+		                            	<tr></td>
+<td><input type="submit" name="formBusqueda:j_idt76" value="Búsqueda Especializada " onclick="jsf.util.chain(this,event,'this.form.target=\'_self\';RichFaces.$(\'panelStatus\').show();','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:j_idt76\':\'formBusqueda:j_idt76\',\'forward\':\'especializada\'},\'\')');return false" /></td>
+</tr>
+<tr>
+<td>
+		                            	</tr>
+                            		</table></td>
+</tr>
+</tbody>
+</table>
+
+		    					</td>
+		    				</tr>
+		    				<tr>
+		    					<td colspan="4"> </td>
+		    				</tr>
+		    				<tr>
+		    					<td align="left" width="35%"><span id="formBusqueda:optResultado" class="Titulos">De un total de 34016 resoluciones, se obtuvieron los siguientes resultados.</span>
+		    					</td>
+		    					<td align="left" width="15"><table style="text-align:left">
+<tbody>
+<tr>
+<td><span class="data">Ordenar por:</span></td>
+<td> 
+			    					</td>
+<td><div class="rf-sel" id="formBusqueda:buOrden"><span class="rf-sel-cntr"><input id="formBusqueda:buOrdenselValue" name="formBusqueda:buOrden" type="hidden" value="21" /><input autocomplete="off" class="rf-sel-inp rf-sel-dflt-lbl" id="formBusqueda:buOrdenInput" name="formBusqueda:buOrdenInput" readonly="readonly" type="text" value="Fecha Resolución" /><span class="rf-sel-btn" id="formBusqueda:buOrdenButton"><span class="rf-sel-btn-arrow"></span></span></span><div class="rf-sel-lst-cord" id="formBusqueda:buOrdenList"><div class="rf-sel-shdw"><div class="rf-sel-shdw-t"></div><div class="rf-sel-shdw-l"></div><div class="rf-sel-shdw-r"></div><div class="rf-sel-shdw-b"></div><div class="rf-sel-lst-dcrtn"><div class="rf-sel-lst-scrl" style="min-height: 20px;max-height: 100px;width: 200px"><div id="formBusqueda:buOrdenItems"><div id="formBusqueda:buOrdenItem0" class="rf-sel-opt">Nro de Recurso</div><div id="formBusqueda:buOrdenItem1" class="rf-sel-opt">Año</div><div id="formBusqueda:buOrdenItem2" class="rf-sel-opt">Pretensión/Delito</div><div id="formBusqueda:buOrdenItem3" class="rf-sel-opt">Tipo de Resolución</div><div id="formBusqueda:buOrdenItem4" class="rf-sel-opt">Sala Suprema</div><div id="formBusqueda:buOrdenItem5" class="rf-sel-opt">Fecha Resolución</div></div></div></div></div></div><script type="text/javascript">new RichFaces.ui.Select("formBusqueda:buOrden", {"clientSelectItems":[{ 'id' : "formBusqueda:buOrdenItem0" , 'label' : "Nro de Recurso", 'value' : "0"},{ 'id' : "formBusqueda:buOrdenItem1" , 'label' : "Año", 'value' : "64"},{ 'id' : "formBusqueda:buOrdenItem2" , 'label' : "Pretensión\/Delito", 'value' : "66"},{ 'id' : "formBusqueda:buOrdenItem3" , 'label' : "Tipo de Resolución", 'value' : "67"},{ 'id' : "formBusqueda:buOrdenItem4" , 'label' : "Sala Suprema", 'value' : "68"},{ 'id' : "formBusqueda:buOrdenItem5" , 'label' : "Fecha Resolución", 'value' : "21"}] ,"itemCss":"rf\u002Dsel\u002Dopt","selectItemCss":"rf\u002Dsel\u002Dsel","onselectitem":function(event){RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"selectitem","org.richfaces.ajax.component":"formBusqueda:buOrden"} ,"sourceId":this} )},"defaultLabel":"Fecha Resolución"} );</script></div></td>
+</tr>
+</tbody>
+</table>
+
+		    					</td>
+		    					<td align="left" width="35%"><table style="text-align:left">
+<tbody>
+<tr>
+<td><span class="data">Forma:</span></td>
+<td> 
+			    					</td>
+<td><div class="rf-sel" id="formBusqueda:buOrdenForma"><span class="rf-sel-cntr"><input id="formBusqueda:buOrdenFormaselValue" name="formBusqueda:buOrdenForma" type="hidden" value="ASC" /><input autocomplete="off" class="rf-sel-inp rf-sel-dflt-lbl" id="formBusqueda:buOrdenFormaInput" name="formBusqueda:buOrdenFormaInput" readonly="readonly" type="text" value="Ascendente" /><span class="rf-sel-btn" id="formBusqueda:buOrdenFormaButton"><span class="rf-sel-btn-arrow"></span></span></span><div class="rf-sel-lst-cord" id="formBusqueda:buOrdenFormaList"><div class="rf-sel-shdw"><div class="rf-sel-shdw-t"></div><div class="rf-sel-shdw-l"></div><div class="rf-sel-shdw-r"></div><div class="rf-sel-shdw-b"></div><div class="rf-sel-lst-dcrtn"><div class="rf-sel-lst-scrl" style="min-height: 20px;max-height: 100px;width: 200px"><div id="formBusqueda:buOrdenFormaItems"><div id="formBusqueda:buOrdenFormaItem0" class="rf-sel-opt">Ascendente</div><div id="formBusqueda:buOrdenFormaItem1" class="rf-sel-opt">Descendente</div></div></div></div></div></div><script type="text/javascript">new RichFaces.ui.Select("formBusqueda:buOrdenForma", {"clientSelectItems":[{ 'id' : "formBusqueda:buOrdenFormaItem0" , 'label' : "Ascendente", 'value' : "ASC"},{ 'id' : "formBusqueda:buOrdenFormaItem1" , 'label' : "Descendente", 'value' : "DESC"}] ,"itemCss":"rf\u002Dsel\u002Dopt","selectItemCss":"rf\u002Dsel\u002Dsel","onselectitem":function(event){RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"selectitem","org.richfaces.ajax.component":"formBusqueda:buOrdenForma"} ,"sourceId":this} )},"defaultLabel":"Ascendente"} );</script></div></td>
+</tr>
+</tbody>
+</table>
+
+		    					</td>
+		    					<td align="right" width="15%"><table>
+<tbody>
+<tr>
+<td><span class="data">Ver:</span></td>
+<td><div class="rf-sel mySelectStyle" id="formBusqueda:buPaginas"><span class="rf-sel-cntr"><input id="formBusqueda:buPaginasselValue" name="formBusqueda:buPaginas" type="hidden" value="10" /><input autocomplete="off" class="rf-sel-inp rf-sel-dflt-lbl" id="formBusqueda:buPaginasInput" name="formBusqueda:buPaginasInput" readonly="readonly" type="text" value="10 resultados" title="10" /><span class="rf-sel-btn" id="formBusqueda:buPaginasButton"><span class="rf-sel-btn-arrow"></span></span></span><div class="rf-sel-lst-cord" id="formBusqueda:buPaginasList"><div class="rf-sel-shdw"><div class="rf-sel-shdw-t"></div><div class="rf-sel-shdw-l"></div><div class="rf-sel-shdw-r"></div><div class="rf-sel-shdw-b"></div><div class="rf-sel-lst-dcrtn"><div class="rf-sel-lst-scrl" style="min-height: 20px;max-height: 100px;width: 100px"><div id="formBusqueda:buPaginasItems"><div id="formBusqueda:buPaginasItem0" class="rf-sel-opt">10 resultados</div><div id="formBusqueda:buPaginasItem1" class="rf-sel-opt">20 resultados</div><div id="formBusqueda:buPaginasItem2" class="rf-sel-opt">30 resultados</div></div></div></div></div></div><script type="text/javascript">new RichFaces.ui.Select("formBusqueda:buPaginas", {"clientSelectItems":[{ 'id' : "formBusqueda:buPaginasItem0" , 'label' : "10 resultados", 'value' : "10"},{ 'id' : "formBusqueda:buPaginasItem1" , 'label' : "20 resultados", 'value' : "20"},{ 'id' : "formBusqueda:buPaginasItem2" , 'label' : "30 resultados", 'value' : "30"}] ,"itemCss":"rf\u002Dsel\u002Dopt","selectItemCss":"rf\u002Dsel\u002Dsel","onselectitem":function(event){RichFaces.ajax(this,event,{"parameters":{"javax.faces.behavior.event":"selectitem","org.richfaces.ajax.component":"formBusqueda:buPaginas"} ,"sourceId":this} )},"defaultLabel":"10 resultados"} );</script></div></td>
+</tr>
+</tbody>
+</table>
+
+		    					</td>
+		    				</tr>
+		    			</table><table id="formBusqueda:panealJur">
+<tbody>
+<tr>
+<td><div id="formBusqueda:j_idt99">
+		    		<table width="100%">
+		    		<tr>
+		    		<td align="left" width="30%"><table id="formBusqueda:panelDescarga1">
+<tbody>
+<tr>
+<td><a href="#" title="Imprimir" onclick="mojarra.jsfcljs(document.getElementById('formBusqueda'),{'formBusqueda:j_idt101':'formBusqueda:j_idt101'},'_blank');return false"><span style="font-weight:bold">Exportar </span><img src="../imagen/xls.png" alt="Exportar" style="border: 0px" /></a></td>
+<td>  
+	                              </td>
+<td><a href="#" id="formBusqueda:j_idt108" name="formBusqueda:j_idt108" onclick="RichFaces.ajax(&quot;formBusqueda:j_idt108&quot;,event,{&quot;incId&quot;:&quot;1&quot;} );return false;" title="Descargar"><span style="font-weight:bold">Descargar </span><img src="../imagen/zip_file.png" alt="Descargar" style="width:20px;height:20px;border:0px;" /></a></td>
+</tr>
+</tbody>
+</table>
+<div id="formBusqueda:popupDescarga" style="visibility: hidden;"><div class="rf-pp-shade" id="formBusqueda:popupDescarga_shade" style="z-index:100;"><button class="rf-pp-btn" id="formBusqueda:popupDescargaFirstHref"></button></div><div class="rf-pp-cntr " id="formBusqueda:popupDescarga_container" style="position: fixed; z-index:100; "><div class="rf-pp-shdw" id="formBusqueda:popupDescarga_shadow"></div><div class="rf-pp-cnt-scrlr" id="formBusqueda:popupDescarga_content_scroller"><div class="rf-pp-cnt" id="formBusqueda:popupDescarga_content">
+							<table>
+								<tr>
+									<td align="left">
+										Para descargar las Resoluciones en un archivo zip debe haber al menos una seleccionada y un máximo de 5.
+									</td>
+									<td> </td>
+									<td valign="middle" align="center"><input type="submit" name="formBusqueda:j_idt112" value="Aceptar" onclick="RichFaces.$('formBusqueda:popupDescarga').hide();return false;" />
+									</td>
+								</tr>
+							</table></div></div></div><script type="text/javascript">new RichFaces.ui.PopupPanel("formBusqueda:popupDescarga",{"autosized":true} );</script></div>
+                    </td>
+		    		<td align="center" width="40%"><span class="rf-ds " id="formBusqueda:j_idt115"><span class="rf-ds-nmb-btn rf-ds-act " id="formBusqueda:j_idt115_ds_1">1</span><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt115_ds_2">2</a><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt115_ds_3">3</a><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt115_ds_4">4</a><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt115_ds_5">5</a><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt115_ds_6">6</a><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt115_ds_7">7</a><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt115_ds_8">8</a><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt115_ds_9">9</a><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt115_ds_10">10</a><a class="rf-ds-btn rf-ds-btn-next" href="javascript:void(0);" id="formBusqueda:j_idt115_ds_next">»</a><a class="rf-ds-btn rf-ds-btn-last" href="javascript:void(0);" id="formBusqueda:j_idt115_ds_l">»»»»</a><script type="text/javascript">new RichFaces.ui.DataScroller("formBusqueda:j_idt115",function(event,element,data){RichFaces.ajax("formBusqueda:j_idt115",event,{"parameters":{"formBusqueda:j_idt115:page":data.page} ,"incId":"1"} )},{"digitals":{"formBusqueda:j_idt115_ds_5":"5","formBusqueda:j_idt115_ds_4":"4","formBusqueda:j_idt115_ds_10":"10","formBusqueda:j_idt115_ds_3":"3","formBusqueda:j_idt115_ds_2":"2","formBusqueda:j_idt115_ds_9":"9","formBusqueda:j_idt115_ds_8":"8","formBusqueda:j_idt115_ds_7":"7","formBusqueda:j_idt115_ds_6":"6","formBusqueda:j_idt115_ds_1":"1"} ,"buttons":{"right":{"formBusqueda:j_idt115_ds_next":"next","formBusqueda:j_idt115_ds_l":"last"} } ,"currentPage":1} )</script></span></td>
+		    		<td align="center" width="30%"> </td>
+		    		</tr>
+		    		</table></div></td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td><div id="formBusqueda:panel"><div class="rf-p " id="formBusqueda:repeat:0:j_idt118" style="width:100%; text-align:left;"><div class="rf-p-hdr " id="formBusqueda:repeat:0:j_idt118_header"><table style="text-align:left;">
+<tbody>
+<tr>
+<td><input id="formBusqueda:repeat:0:j_idt120" type="checkbox" name="formBusqueda:repeat:0:j_idt120" title="Seleccione para descargar resolución" onclick="RichFaces.ajax(this,event,{&quot;parameters&quot;:{&quot;javax.faces.behavior.event&quot;:&quot;click&quot;,&quot;org.richfaces.ajax.component&quot;:&quot;formBusqueda:repeat:0:j_idt120&quot;} ,&quot;sourceId&quot;:this} )" /></td>
+<td><span style="font-weight:bold">Casación</span></td>
+<td> - </td>
+<td><span style="font-weight:bold">004211-2012</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="rf-p-b " id="formBusqueda:repeat:0:j_idt118_body"><table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Pretensión/Delito:</span></td>
+<td><span style="font-weight:bold">Anulación de Laudo Arbitral</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Tipo Resolución:</span></td>
+<td><span style="font-weight:bold">Auto</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Fecha Resolución:</span></td>
+<td><span style="font-weight:bold">04/01/2013</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sala Suprema:</span></td>
+<td><span style="font-weight:bold">Sala Civil Transitoria</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Noma de Derecho Interno:</span></td>
+<td><span style="font-weight:bold">D. Leg.: 1071</span></td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sumilla: </span></td>
+<td>Procede recurso de casación contra lo resuelto por la Corte Superior cuando el laudo hubiera sido anulado en forma total o parcial</td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold;">Palabras Claves: </span></td>
+<td>Laudo arbitral, Incumplimiento de los requisitos de procedencia</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><input type="submit" name="formBusqueda:repeat:0:j_idt146" value="Ver Ficha" onclick="jsf.util.chain(this,event,'this.form.target=\'_blank\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:0:j_idt146\':\'formBusqueda:repeat:0:j_idt146\',\'forward\':\'detalle\',\'uuid\':\'24b00e00-efae-4265-83b6-5074b600d144\',\'recurso\':\'Casación\',\'nroexp\':\'004211-2012\',\'palabras\':\'Laudo arbitral, Incumplimiento de los requisitos de procedencia\',\'pretensiones\':\'Anulación de Laudo Arbitral\',\'normaDI\':\'D. Leg.: 1071\',\'tipoResolucion\':\'Auto\',\'fechaResolucion\':\'04/01/2013\',\'sala\':\'Sala Civil Transitoria\',\'sumilla\':\'Procede recurso de casación contra lo resuelto por la Corte Superior cuando el laudo hubiera sido anulado en forma total o parcial\'},\'\')');return false" /></td>
+<td><input type="submit" name="formBusqueda:repeat:0:j_idt158" value="Ver Resolución" onclick="jsf.util.chain(this,event,'this.form.target=\'_self\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:0:j_idt158\':\'formBusqueda:repeat:0:j_idt158\',\'uuid\':\'24b00e00-efae-4265-83b6-5074b600d144\'},\'\')');return false" /></td>
+</tr>
+</tbody>
+</table>
+</div></div> <div class="rf-p " id="formBusqueda:repeat:1:j_idt118" style="width:100%; text-align:left;"><div class="rf-p-hdr " id="formBusqueda:repeat:1:j_idt118_header"><table style="text-align:left;">
+<tbody>
+<tr>
+<td><input id="formBusqueda:repeat:1:j_idt120" type="checkbox" name="formBusqueda:repeat:1:j_idt120" title="Seleccione para descargar resolución" onclick="RichFaces.ajax(this,event,{&quot;parameters&quot;:{&quot;javax.faces.behavior.event&quot;:&quot;click&quot;,&quot;org.richfaces.ajax.component&quot;:&quot;formBusqueda:repeat:1:j_idt120&quot;} ,&quot;sourceId&quot;:this} )" /></td>
+<td><span style="font-weight:bold">Casación</span></td>
+<td> - </td>
+<td><span style="font-weight:bold">000187-2011</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="rf-p-b " id="formBusqueda:repeat:1:j_idt118_body"><table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Pretensión/Delito:</span></td>
+<td><span style="font-weight:bold">Tercería de Propiedad</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Tipo Resolución:</span></td>
+<td><span style="font-weight:bold">Auto</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Fecha Resolución:</span></td>
+<td><span style="font-weight:bold">07/01/2013</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sala Suprema:</span></td>
+<td><span style="font-weight:bold">Sala Civil Permanente</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Noma de Derecho Interno:</span></td>
+<td><span style="font-weight:bold">Código: Código Civil</span></td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sumilla: </span></td>
+<td>Las anotaciones en Registro de Propiedad Inmueble no son constitutivas de derechos sino solo declarativas; no siendo la  tercería de propiedad un proceso en el que se declare el mejor derecho de propiedad.</td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold;">Palabras Claves: </span></td>
+<td>Incumplimiento de los requisitos de procedencia, Valoración de la prueba</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><input type="submit" name="formBusqueda:repeat:1:j_idt146" value="Ver Ficha" onclick="jsf.util.chain(this,event,'this.form.target=\'_blank\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:1:j_idt146\':\'formBusqueda:repeat:1:j_idt146\',\'forward\':\'detalle\',\'uuid\':\'b6c9be34-e345-4165-8c4a-28f9e3f90f7d\',\'recurso\':\'Casación\',\'nroexp\':\'000187-2011\',\'palabras\':\'Incumplimiento de los requisitos de procedencia, Valoración de la prueba\',\'pretensiones\':\'Tercería de Propiedad\',\'normaDI\':\'Código: Código Civil\',\'tipoResolucion\':\'Auto\',\'fechaResolucion\':\'07/01/2013\',\'sala\':\'Sala Civil Permanente\',\'sumilla\':\'Las anotaciones en Registro de Propiedad Inmueble no son constitutivas de derechos sino solo declarativas; no siendo la  tercería de propiedad un proceso en el que se declare el mejor derecho de propiedad.\'},\'\')');return false" /></td>
+<td><input type="submit" name="formBusqueda:repeat:1:j_idt158" value="Ver Resolución" onclick="jsf.util.chain(this,event,'this.form.target=\'_self\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:1:j_idt158\':\'formBusqueda:repeat:1:j_idt158\',\'uuid\':\'b6c9be34-e345-4165-8c4a-28f9e3f90f7d\'},\'\')');return false" /></td>
+</tr>
+</tbody>
+</table>
+</div></div> <div class="rf-p " id="formBusqueda:repeat:2:j_idt118" style="width:100%; text-align:left;"><div class="rf-p-hdr " id="formBusqueda:repeat:2:j_idt118_header"><table style="text-align:left;">
+<tbody>
+<tr>
+<td><input id="formBusqueda:repeat:2:j_idt120" type="checkbox" name="formBusqueda:repeat:2:j_idt120" title="Seleccione para descargar resolución" onclick="RichFaces.ajax(this,event,{&quot;parameters&quot;:{&quot;javax.faces.behavior.event&quot;:&quot;click&quot;,&quot;org.richfaces.ajax.component&quot;:&quot;formBusqueda:repeat:2:j_idt120&quot;} ,&quot;sourceId&quot;:this} )" /></td>
+<td><span style="font-weight:bold">Casación</span></td>
+<td> - </td>
+<td><span style="font-weight:bold">003341-2009</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="rf-p-b " id="formBusqueda:repeat:2:j_idt118_body"><table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Pretensión/Delito:</span></td>
+<td><span style="font-weight:bold">Nulidad de Cosa Juzgada Fraudulenta</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Tipo Resolución:</span></td>
+<td><span style="font-weight:bold">Auto</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Fecha Resolución:</span></td>
+<td><span style="font-weight:bold">07/01/2013</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sala Suprema:</span></td>
+<td><span style="font-weight:bold">Sala Civil Permanente</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Noma de Derecho Interno:</span></td>
+<td><span style="font-weight:bold">Código: Código Procesal Civil</span></td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sumilla: </span></td>
+<td>El incumplimiento de cualquiera de los requisitos formales señalados en el artículo 388 del Código Procesal Civil, da lugar a la no procedencia del recurso de casación.</td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold;">Palabras Claves: </span></td>
+<td>Prescripción del procedimiento administrativo, Dolo, Incumplimiento de los requisitos de procedencia</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><input type="submit" name="formBusqueda:repeat:2:j_idt146" value="Ver Ficha" onclick="jsf.util.chain(this,event,'this.form.target=\'_blank\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:2:j_idt146\':\'formBusqueda:repeat:2:j_idt146\',\'forward\':\'detalle\',\'uuid\':\'97a4a951-cda8-46d7-8f87-1fcb474b0cce\',\'recurso\':\'Casación\',\'nroexp\':\'003341-2009\',\'palabras\':\'Prescripción del procedimiento administrativo, Dolo, Incumplimiento de los requisitos de procedencia\',\'pretensiones\':\'Nulidad de Cosa Juzgada Fraudulenta\',\'normaDI\':\'Código: Código Procesal Civil\',\'tipoResolucion\':\'Auto\',\'fechaResolucion\':\'07/01/2013\',\'sala\':\'Sala Civil Permanente\',\'sumilla\':\'El incumplimiento de cualquiera de los requisitos formales señalados en el artículo 388 del Código Procesal Civil, da lugar a la no procedencia del recurso de casación.\'},\'\')');return false" /></td>
+<td><input type="submit" name="formBusqueda:repeat:2:j_idt158" value="Ver Resolución" onclick="jsf.util.chain(this,event,'this.form.target=\'_self\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:2:j_idt158\':\'formBusqueda:repeat:2:j_idt158\',\'uuid\':\'97a4a951-cda8-46d7-8f87-1fcb474b0cce\'},\'\')');return false" /></td>
+</tr>
+</tbody>
+</table>
+</div></div> <div class="rf-p " id="formBusqueda:repeat:3:j_idt118" style="width:100%; text-align:left;"><div class="rf-p-hdr " id="formBusqueda:repeat:3:j_idt118_header"><table style="text-align:left;">
+<tbody>
+<tr>
+<td><input id="formBusqueda:repeat:3:j_idt120" type="checkbox" name="formBusqueda:repeat:3:j_idt120" title="Seleccione para descargar resolución" onclick="RichFaces.ajax(this,event,{&quot;parameters&quot;:{&quot;javax.faces.behavior.event&quot;:&quot;click&quot;,&quot;org.richfaces.ajax.component&quot;:&quot;formBusqueda:repeat:3:j_idt120&quot;} ,&quot;sourceId&quot;:this} )" /></td>
+<td><span style="font-weight:bold">Casación</span></td>
+<td> - </td>
+<td><span style="font-weight:bold">003978-2012</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="rf-p-b " id="formBusqueda:repeat:3:j_idt118_body"><table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Pretensión/Delito:</span></td>
+<td><span style="font-weight:bold">Ejecución de Garantías</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Tipo Resolución:</span></td>
+<td><span style="font-weight:bold">Auto</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Fecha Resolución:</span></td>
+<td><span style="font-weight:bold">07/01/2013</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sala Suprema:</span></td>
+<td><span style="font-weight:bold">Sala Civil Transitoria</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Noma de Derecho Interno:</span></td>
+<td><span style="font-weight:bold">Código: Código Procesal Civil</span></td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sumilla: </span></td>
+<td>Al interponer recurso de casación se debe precisar en cuál de las causales se sustenta la impugnación, describiendo con claridad y precisión la infracción normativa o el apartamiento inmotivado del precedente judicial, y demostrando su indicidencia directa sobre la decisión contenida en la resolución impugnada </td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold;">Palabras Claves: </span></td>
+<td>Incumplimiento de los requisitos de procedencia</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><input type="submit" name="formBusqueda:repeat:3:j_idt146" value="Ver Ficha" onclick="jsf.util.chain(this,event,'this.form.target=\'_blank\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:3:j_idt146\':\'formBusqueda:repeat:3:j_idt146\',\'forward\':\'detalle\',\'uuid\':\'8f920009-1704-46b6-b143-b006d8ee2ab8\',\'recurso\':\'Casación\',\'nroexp\':\'003978-2012\',\'palabras\':\'Incumplimiento de los requisitos de procedencia\',\'pretensiones\':\'Ejecución de Garantías\',\'normaDI\':\'Código: Código Procesal Civil\',\'tipoResolucion\':\'Auto\',\'fechaResolucion\':\'07/01/2013\',\'sala\':\'Sala Civil Transitoria\',\'sumilla\':\'Al interponer recurso de casación se debe precisar en cuál de las causales se sustenta la impugnación, describiendo con claridad y precisión la infracción normativa o el apartamiento inmotivado del precedente judicial, y demostrando su indicidencia directa sobre la decisión contenida en la resolución impugnada \'},\'\')');return false" /></td>
+<td><input type="submit" name="formBusqueda:repeat:3:j_idt158" value="Ver Resolución" onclick="jsf.util.chain(this,event,'this.form.target=\'_self\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:3:j_idt158\':\'formBusqueda:repeat:3:j_idt158\',\'uuid\':\'8f920009-1704-46b6-b143-b006d8ee2ab8\'},\'\')');return false" /></td>
+</tr>
+</tbody>
+</table>
+</div></div> <div class="rf-p " id="formBusqueda:repeat:4:j_idt118" style="width:100%; text-align:left;"><div class="rf-p-hdr " id="formBusqueda:repeat:4:j_idt118_header"><table style="text-align:left;">
+<tbody>
+<tr>
+<td><input id="formBusqueda:repeat:4:j_idt120" type="checkbox" name="formBusqueda:repeat:4:j_idt120" title="Seleccione para descargar resolución" onclick="RichFaces.ajax(this,event,{&quot;parameters&quot;:{&quot;javax.faces.behavior.event&quot;:&quot;click&quot;,&quot;org.richfaces.ajax.component&quot;:&quot;formBusqueda:repeat:4:j_idt120&quot;} ,&quot;sourceId&quot;:this} )" /></td>
+<td><span style="font-weight:bold">Casación</span></td>
+<td> - </td>
+<td><span style="font-weight:bold">003963-2012</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="rf-p-b " id="formBusqueda:repeat:4:j_idt118_body"><table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Pretensión/Delito:</span></td>
+<td><span style="font-weight:bold">Nulidad de Cosa Juzgada Fraudulenta</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Tipo Resolución:</span></td>
+<td><span style="font-weight:bold">Auto</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Fecha Resolución:</span></td>
+<td><span style="font-weight:bold">07/01/2013</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sala Suprema:</span></td>
+<td><span style="font-weight:bold">Sala Civil Transitoria</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Noma de Derecho Interno:</span></td>
+<td><span style="font-weight:bold">Código: Código Civil</span></td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sumilla: </span></td>
+<td>Existe debida motivación cuando se expresa las razones por las cuales no se  configura el fraude, al señalarse con claridad y precisión que las decisiones jurisdiccionales materia de nulidad no desconocen el derecho de propiedad que asiste al demandante sobre el predio sub litis y que la mención al proceso de reivindicación de bienes hereditarios es en respuesta a la defensa de la parte demandada en el proceso de exclusión de bien, sin que ello importe el avocamiento de los jueces a otro proceso</td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold;">Palabras Claves: </span></td>
+<td>Incumplimiento de los requisitos de procedencia</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><input type="submit" name="formBusqueda:repeat:4:j_idt146" value="Ver Ficha" onclick="jsf.util.chain(this,event,'this.form.target=\'_blank\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:4:j_idt146\':\'formBusqueda:repeat:4:j_idt146\',\'forward\':\'detalle\',\'uuid\':\'c8c030f3-8de3-40ed-b20c-000651d1d378\',\'recurso\':\'Casación\',\'nroexp\':\'003963-2012\',\'palabras\':\'Incumplimiento de los requisitos de procedencia\',\'pretensiones\':\'Nulidad de Cosa Juzgada Fraudulenta\',\'normaDI\':\'Código: Código Civil\',\'tipoResolucion\':\'Auto\',\'fechaResolucion\':\'07/01/2013\',\'sala\':\'Sala Civil Transitoria\',\'sumilla\':\'Existe debida motivación cuando se expresa las razones por las cuales no se  configura el fraude, al señalarse con claridad y precisión que las decisiones jurisdiccionales materia de nulidad no desconocen el derecho de propiedad que asiste al demandante sobre el predio sub litis y que la mención al proceso de reivindicación de bienes hereditarios es en respuesta a la defensa de la parte demandada en el proceso de exclusión de bien, sin que ello importe el avocamiento de los jueces a otro proceso\'},\'\')');return false" /></td>
+<td><input type="submit" name="formBusqueda:repeat:4:j_idt158" value="Ver Resolución" onclick="jsf.util.chain(this,event,'this.form.target=\'_self\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:4:j_idt158\':\'formBusqueda:repeat:4:j_idt158\',\'uuid\':\'c8c030f3-8de3-40ed-b20c-000651d1d378\'},\'\')');return false" /></td>
+</tr>
+</tbody>
+</table>
+</div></div> <div class="rf-p " id="formBusqueda:repeat:5:j_idt118" style="width:100%; text-align:left;"><div class="rf-p-hdr " id="formBusqueda:repeat:5:j_idt118_header"><table style="text-align:left;">
+<tbody>
+<tr>
+<td><input id="formBusqueda:repeat:5:j_idt120" type="checkbox" name="formBusqueda:repeat:5:j_idt120" title="Seleccione para descargar resolución" onclick="RichFaces.ajax(this,event,{&quot;parameters&quot;:{&quot;javax.faces.behavior.event&quot;:&quot;click&quot;,&quot;org.richfaces.ajax.component&quot;:&quot;formBusqueda:repeat:5:j_idt120&quot;} ,&quot;sourceId&quot;:this} )" /></td>
+<td><span style="font-weight:bold">Casación</span></td>
+<td> - </td>
+<td><span style="font-weight:bold">003958-2012</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="rf-p-b " id="formBusqueda:repeat:5:j_idt118_body"><table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Pretensión/Delito:</span></td>
+<td><span style="font-weight:bold">Ejecución de Garantías</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Tipo Resolución:</span></td>
+<td><span style="font-weight:bold">Auto</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Fecha Resolución:</span></td>
+<td><span style="font-weight:bold">07/01/2013</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sala Suprema:</span></td>
+<td><span style="font-weight:bold">Sala Civil Transitoria</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Noma de Derecho Interno:</span></td>
+<td><span style="font-weight:bold">Código: Código Procesal Civil</span></td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sumilla: </span></td>
+<td>No existe infracción al derecho de motivación de resoluciones judiciales en su manifestación de incongruencia externa, cuando el Ad quem conforme al certificado registral inmobiliario, ordena la ejecución del inmueble sub litis al advertir que las dos direcciones esbozadas en autos aluden en realidad al mismo inmueble </td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold;">Palabras Claves: </span></td>
+<td>Derecho a la debida motivación, Incumplimiento de los requisitos de procedencia</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><input type="submit" name="formBusqueda:repeat:5:j_idt146" value="Ver Ficha" onclick="jsf.util.chain(this,event,'this.form.target=\'_blank\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:5:j_idt146\':\'formBusqueda:repeat:5:j_idt146\',\'forward\':\'detalle\',\'uuid\':\'9243ba80-0470-4f8e-916c-89567cf137b9\',\'recurso\':\'Casación\',\'nroexp\':\'003958-2012\',\'palabras\':\'Derecho a la debida motivación, Incumplimiento de los requisitos de procedencia\',\'pretensiones\':\'Ejecución de Garantías\',\'normaDI\':\'Código: Código Procesal Civil\',\'tipoResolucion\':\'Auto\',\'fechaResolucion\':\'07/01/2013\',\'sala\':\'Sala Civil Transitoria\',\'sumilla\':\'No existe infracción al derecho de motivación de resoluciones judiciales en su manifestación de incongruencia externa, cuando el Ad quem conforme al certificado registral inmobiliario, ordena la ejecución del inmueble sub litis al advertir que las dos direcciones esbozadas en autos aluden en realidad al mismo inmueble \'},\'\')');return false" /></td>
+<td><input type="submit" name="formBusqueda:repeat:5:j_idt158" value="Ver Resolución" onclick="jsf.util.chain(this,event,'this.form.target=\'_self\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:5:j_idt158\':\'formBusqueda:repeat:5:j_idt158\',\'uuid\':\'9243ba80-0470-4f8e-916c-89567cf137b9\'},\'\')');return false" /></td>
+</tr>
+</tbody>
+</table>
+</div></div> <div class="rf-p " id="formBusqueda:repeat:6:j_idt118" style="width:100%; text-align:left;"><div class="rf-p-hdr " id="formBusqueda:repeat:6:j_idt118_header"><table style="text-align:left;">
+<tbody>
+<tr>
+<td><input id="formBusqueda:repeat:6:j_idt120" type="checkbox" name="formBusqueda:repeat:6:j_idt120" title="Seleccione para descargar resolución" onclick="RichFaces.ajax(this,event,{&quot;parameters&quot;:{&quot;javax.faces.behavior.event&quot;:&quot;click&quot;,&quot;org.richfaces.ajax.component&quot;:&quot;formBusqueda:repeat:6:j_idt120&quot;} ,&quot;sourceId&quot;:this} )" /></td>
+<td><span style="font-weight:bold">Casación</span></td>
+<td> - </td>
+<td><span style="font-weight:bold">003974-2012</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="rf-p-b " id="formBusqueda:repeat:6:j_idt118_body"><table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Pretensión/Delito:</span></td>
+<td><span style="font-weight:bold">Nulidad de Acto Jurídico</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Tipo Resolución:</span></td>
+<td><span style="font-weight:bold">Auto</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Fecha Resolución:</span></td>
+<td><span style="font-weight:bold">07/01/2013</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sala Suprema:</span></td>
+<td><span style="font-weight:bold">Sala Civil Transitoria</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Noma de Derecho Interno:</span></td>
+<td><span style="font-weight:bold">Código: Código Procesal Civil</span></td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sumilla: </span></td>
+<td>A través del recurso de Casación no es viable pretender un reexamen factico mediante el cuestionamiento del criterio jurisdiccional asumido por las instancias de mérito al haber determinado que se aplica al caso de autos la prescripción establecida por el artículo 2001 inciso 1 del Código Civil</td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold;">Palabras Claves: </span></td>
+<td>Valoración de los hechos, Incumplimiento de los requisitos de procedencia</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><input type="submit" name="formBusqueda:repeat:6:j_idt146" value="Ver Ficha" onclick="jsf.util.chain(this,event,'this.form.target=\'_blank\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:6:j_idt146\':\'formBusqueda:repeat:6:j_idt146\',\'forward\':\'detalle\',\'uuid\':\'4ab541f2-adfd-4da6-8a47-a864de986b3f\',\'recurso\':\'Casación\',\'nroexp\':\'003974-2012\',\'palabras\':\'Valoración de los hechos, Incumplimiento de los requisitos de procedencia\',\'pretensiones\':\'Nulidad de Acto Jurídico\',\'normaDI\':\'Código: Código Procesal Civil\',\'tipoResolucion\':\'Auto\',\'fechaResolucion\':\'07/01/2013\',\'sala\':\'Sala Civil Transitoria\',\'sumilla\':\'A través del recurso de Casación no es viable pretender un reexamen factico mediante el cuestionamiento del criterio jurisdiccional asumido por las instancias de mérito al haber determinado que se aplica al caso de autos la prescripción establecida por el artículo 2001 inciso 1 del Código Civil\'},\'\')');return false" /></td>
+<td><input type="submit" name="formBusqueda:repeat:6:j_idt158" value="Ver Resolución" onclick="jsf.util.chain(this,event,'this.form.target=\'_self\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:6:j_idt158\':\'formBusqueda:repeat:6:j_idt158\',\'uuid\':\'4ab541f2-adfd-4da6-8a47-a864de986b3f\'},\'\')');return false" /></td>
+</tr>
+</tbody>
+</table>
+</div></div> <div class="rf-p " id="formBusqueda:repeat:7:j_idt118" style="width:100%; text-align:left;"><div class="rf-p-hdr " id="formBusqueda:repeat:7:j_idt118_header"><table style="text-align:left;">
+<tbody>
+<tr>
+<td><input id="formBusqueda:repeat:7:j_idt120" type="checkbox" name="formBusqueda:repeat:7:j_idt120" title="Seleccione para descargar resolución" onclick="RichFaces.ajax(this,event,{&quot;parameters&quot;:{&quot;javax.faces.behavior.event&quot;:&quot;click&quot;,&quot;org.richfaces.ajax.component&quot;:&quot;formBusqueda:repeat:7:j_idt120&quot;} ,&quot;sourceId&quot;:this} )" /></td>
+<td><span style="font-weight:bold">Casación</span></td>
+<td> - </td>
+<td><span style="font-weight:bold">002362-2012</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="rf-p-b " id="formBusqueda:repeat:7:j_idt118_body"><table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Pretensión/Delito:</span></td>
+<td><span style="font-weight:bold">Obligación de Dar Suma de Dinero</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Tipo Resolución:</span></td>
+<td><span style="font-weight:bold">Auto</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Fecha Resolución:</span></td>
+<td><span style="font-weight:bold">07/01/2013</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sala Suprema:</span></td>
+<td><span style="font-weight:bold">Sala de Derecho Constitucional y Social Permanente</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Noma de Derecho Interno:</span></td>
+<td><span style="font-weight:bold">Código: Código Procesal Civil</span></td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sumilla: </span></td>
+<td>Dada la finalidad nomofiláctica del debate Casatorio, no procede el re examen de los hechos establecidos en la instancia de mérito ni de los medios de prueba actuados en el proceso, a fin de arribar a una conclusión distinta a la que subyace en el proceso</td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold;">Palabras Claves: </span></td>
+<td>Valoración de los hechos , Valoración de la prueba</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><input type="submit" name="formBusqueda:repeat:7:j_idt146" value="Ver Ficha" onclick="jsf.util.chain(this,event,'this.form.target=\'_blank\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:7:j_idt146\':\'formBusqueda:repeat:7:j_idt146\',\'forward\':\'detalle\',\'uuid\':\'28df267a-db0d-476b-96f7-13b776d10905\',\'recurso\':\'Casación\',\'nroexp\':\'002362-2012\',\'palabras\':\'Valoración de los hechos , Valoración de la prueba\',\'pretensiones\':\'Obligación de Dar Suma de Dinero\',\'normaDI\':\'Código: Código Procesal Civil\',\'tipoResolucion\':\'Auto\',\'fechaResolucion\':\'07/01/2013\',\'sala\':\'Sala de Derecho Constitucional y Social Permanente\',\'sumilla\':\'Dada la finalidad nomofiláctica del debate Casatorio, no procede el re examen de los hechos establecidos en la instancia de mérito ni de los medios de prueba actuados en el proceso, a fin de arribar a una conclusión distinta a la que subyace en el proceso\'},\'\')');return false" /></td>
+<td><input type="submit" name="formBusqueda:repeat:7:j_idt158" value="Ver Resolución" onclick="jsf.util.chain(this,event,'this.form.target=\'_self\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:7:j_idt158\':\'formBusqueda:repeat:7:j_idt158\',\'uuid\':\'28df267a-db0d-476b-96f7-13b776d10905\'},\'\')');return false" /></td>
+</tr>
+</tbody>
+</table>
+</div></div> <div class="rf-p " id="formBusqueda:repeat:8:j_idt118" style="width:100%; text-align:left;"><div class="rf-p-hdr " id="formBusqueda:repeat:8:j_idt118_header"><table style="text-align:left;">
+<tbody>
+<tr>
+<td><input id="formBusqueda:repeat:8:j_idt120" type="checkbox" name="formBusqueda:repeat:8:j_idt120" title="Seleccione para descargar resolución" onclick="RichFaces.ajax(this,event,{&quot;parameters&quot;:{&quot;javax.faces.behavior.event&quot;:&quot;click&quot;,&quot;org.richfaces.ajax.component&quot;:&quot;formBusqueda:repeat:8:j_idt120&quot;} ,&quot;sourceId&quot;:this} )" /></td>
+<td><span style="font-weight:bold">Casación</span></td>
+<td> - </td>
+<td><span style="font-weight:bold">003341-2009</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="rf-p-b " id="formBusqueda:repeat:8:j_idt118_body"><table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Pretensión/Delito:</span></td>
+<td><span style="font-weight:bold">Nulidad de Cosa Juzgada Fraudulenta</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Tipo Resolución:</span></td>
+<td><span style="font-weight:bold">Auto</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Fecha Resolución:</span></td>
+<td><span style="font-weight:bold">07/01/2013</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sala Suprema:</span></td>
+<td><span style="font-weight:bold">Sala Civil Permanente</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Noma de Derecho Interno:</span></td>
+<td><span style="font-weight:bold">Código Procesal Civil</span></td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sumilla: </span></td>
+<td>Constituye requisito importante para la procedencia del recurso casatorio la satisfacción de los requisitos establecidos en el artículo 388 del Código Procesal Civil, pues al haberse incumplido con demostrar la incidencia directa de la infracción sobre la decisión impugnada no resulta amparable.</td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold;">Palabras Claves: </span></td>
+<td>Plazo de prescripción, Dolo</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><input type="submit" name="formBusqueda:repeat:8:j_idt146" value="Ver Ficha" onclick="jsf.util.chain(this,event,'this.form.target=\'_blank\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:8:j_idt146\':\'formBusqueda:repeat:8:j_idt146\',\'forward\':\'detalle\',\'uuid\':\'b919fdbd-9cba-4518-94ce-104a413bfe25\',\'recurso\':\'Casación\',\'nroexp\':\'003341-2009\',\'palabras\':\'Plazo de prescripción, Dolo\',\'pretensiones\':\'Nulidad de Cosa Juzgada Fraudulenta\',\'normaDI\':\'Código Procesal Civil\',\'tipoResolucion\':\'Auto\',\'fechaResolucion\':\'07/01/2013\',\'sala\':\'Sala Civil Permanente\',\'sumilla\':\'Constituye requisito importante para la procedencia del recurso casatorio la satisfacción de los requisitos establecidos en el artículo 388 del Código Procesal Civil, pues al haberse incumplido con demostrar la incidencia directa de la infracción sobre la decisión impugnada no resulta amparable.\'},\'\')');return false" /></td>
+<td><input type="submit" name="formBusqueda:repeat:8:j_idt158" value="Ver Resolución" onclick="jsf.util.chain(this,event,'this.form.target=\'_self\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:8:j_idt158\':\'formBusqueda:repeat:8:j_idt158\',\'uuid\':\'b919fdbd-9cba-4518-94ce-104a413bfe25\'},\'\')');return false" /></td>
+</tr>
+</tbody>
+</table>
+</div></div> <div class="rf-p " id="formBusqueda:repeat:9:j_idt118" style="width:100%; text-align:left;"><div class="rf-p-hdr " id="formBusqueda:repeat:9:j_idt118_header"><table style="text-align:left;">
+<tbody>
+<tr>
+<td><input id="formBusqueda:repeat:9:j_idt120" type="checkbox" name="formBusqueda:repeat:9:j_idt120" title="Seleccione para descargar resolución" onclick="RichFaces.ajax(this,event,{&quot;parameters&quot;:{&quot;javax.faces.behavior.event&quot;:&quot;click&quot;,&quot;org.richfaces.ajax.component&quot;:&quot;formBusqueda:repeat:9:j_idt120&quot;} ,&quot;sourceId&quot;:this} )" /></td>
+<td><span style="font-weight:bold">Casación</span></td>
+<td> - </td>
+<td><span style="font-weight:bold">001941-2012</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="rf-p-b " id="formBusqueda:repeat:9:j_idt118_body"><table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Pretensión/Delito:</span></td>
+<td><span style="font-weight:bold">Desalojo por Ocupación Precaria</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Tipo Resolución:</span></td>
+<td><span style="font-weight:bold">Auto</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Fecha Resolución:</span></td>
+<td><span style="font-weight:bold">07/01/2013</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sala Suprema:</span></td>
+<td><span style="font-weight:bold">Sala Civil Permanente</span></td>
+<td>    
+					                            </td>
+<td><span style="font-weight:bold">Noma de Derecho Interno:</span></td>
+<td><span style="font-weight:bold">Código Procesal Civil</span></td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold">Sumilla: </span></td>
+<td>Cuando la causal denunciada, no cumple los requisitos previstos en los incisos 2° y 3° del artículo 388 del Código Procesal Civil, no procede el recurso de casación al no describirse con claridad y precisión la infracción normativa en que hubiese incurrido la Sala, ni demostrado la incidencia directa de la infracción sobre la decisión impugnada.</td>
+</tr>
+</tbody>
+</table>
+<table style="text-align:left">
+<tbody>
+<tr>
+<td><span style="font-weight:bold;">Palabras Claves: </span></td>
+<td>Incumplimiento de los requisitos de procedencia</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td><input type="submit" name="formBusqueda:repeat:9:j_idt146" value="Ver Ficha" onclick="jsf.util.chain(this,event,'this.form.target=\'_blank\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:9:j_idt146\':\'formBusqueda:repeat:9:j_idt146\',\'forward\':\'detalle\',\'uuid\':\'a5039cd8-c083-4cbd-ba81-f7ddc5e1443b\',\'recurso\':\'Casación\',\'nroexp\':\'001941-2012\',\'palabras\':\'Incumplimiento de los requisitos de procedencia\',\'pretensiones\':\'Desalojo por Ocupación Precaria\',\'normaDI\':\'Código Procesal Civil\',\'tipoResolucion\':\'Auto\',\'fechaResolucion\':\'07/01/2013\',\'sala\':\'Sala Civil Permanente\',\'sumilla\':\'Cuando la causal denunciada, no cumple los requisitos previstos en los incisos 2° y 3° del artículo 388 del Código Procesal Civil, no procede el recurso de casación al no describirse con claridad y precisión la infracción normativa en que hubiese incurrido la Sala, ni demostrado la incidencia directa de la infracción sobre la decisión impugnada.\'},\'\')');return false" /></td>
+<td><input type="submit" name="formBusqueda:repeat:9:j_idt158" value="Ver Resolución" onclick="jsf.util.chain(this,event,'this.form.target=\'_self\'','mojarra.jsfcljs(document.getElementById(\'formBusqueda\'),{\'formBusqueda:repeat:9:j_idt158\':\'formBusqueda:repeat:9:j_idt158\',\'uuid\':\'a5039cd8-c083-4cbd-ba81-f7ddc5e1443b\'},\'\')');return false" /></td>
+</tr>
+</tbody>
+</table>
+</div></div> </div></td>
+</tr>
+<tr>
+<td><div id="formBusqueda:j_idt161">
+					                <table width="100%">
+		    		<tr>
+		    		<td align="left" width="30%"><table id="formBusqueda:panelDescarga2">
+<tbody>
+<tr>
+<td><a href="#" title="Imprimir" onclick="mojarra.jsfcljs(document.getElementById('formBusqueda'),{'formBusqueda:j_idt163':'formBusqueda:j_idt163'},'_blank');return false"><span style="font-weight:bold">Exportar </span><img src="../imagen/xls.png" alt="Exportar" style="border: 0px" /></a></td>
+<td>  
+	                              </td>
+<td><a href="#" id="formBusqueda:j_idt170" name="formBusqueda:j_idt170" onclick="RichFaces.ajax(&quot;formBusqueda:j_idt170&quot;,event,{&quot;incId&quot;:&quot;1&quot;} );return false;" title="Descargar"><span style="font-weight:bold">Descargar </span><img src="../imagen/zip_file.png" alt="Descargar" style="width:20px;height:20px;border:0px;" /></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+		    		<td align="center" width="40%"><span class="rf-ds " id="formBusqueda:j_idt174"><span class="rf-ds-nmb-btn rf-ds-act " id="formBusqueda:j_idt174_ds_1">1</span><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt174_ds_2">2</a><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt174_ds_3">3</a><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt174_ds_4">4</a><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt174_ds_5">5</a><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt174_ds_6">6</a><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt174_ds_7">7</a><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt174_ds_8">8</a><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt174_ds_9">9</a><a class="rf-ds-nmb-btn " href="javascript:void(0);" id="formBusqueda:j_idt174_ds_10">10</a><a class="rf-ds-btn rf-ds-btn-next" href="javascript:void(0);" id="formBusqueda:j_idt174_ds_next">»</a><a class="rf-ds-btn rf-ds-btn-last" href="javascript:void(0);" id="formBusqueda:j_idt174_ds_l">»»»»</a><script type="text/javascript">new RichFaces.ui.DataScroller("formBusqueda:j_idt174",function(event,element,data){RichFaces.ajax("formBusqueda:j_idt174",event,{"parameters":{"formBusqueda:j_idt174:page":data.page} ,"incId":"1"} )},{"digitals":{"formBusqueda:j_idt174_ds_10":"10","formBusqueda:j_idt174_ds_2":"2","formBusqueda:j_idt174_ds_1":"1","formBusqueda:j_idt174_ds_5":"5","formBusqueda:j_idt174_ds_6":"6","formBusqueda:j_idt174_ds_3":"3","formBusqueda:j_idt174_ds_4":"4","formBusqueda:j_idt174_ds_9":"9","formBusqueda:j_idt174_ds_7":"7","formBusqueda:j_idt174_ds_8":"8"} ,"buttons":{"right":{"formBusqueda:j_idt174_ds_l":"last","formBusqueda:j_idt174_ds_next":"next"} } ,"currentPage":1} )</script></span></td>
+		    		<td align="center" width="30%"> </td>
+		    		</tr>
+		    		</table></div></td>
+</tr>
+</tbody>
+</table>
+
+					   
+		    		</td>
+		    	</tr>
+		    </table><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-7812701986250177338:-2566782331616547113" autocomplete="off" />
+</form><div id="popupDetalle" style="visibility: hidden;"><div class="rf-pp-shade" id="popupDetalle_shade" style="z-index:100;"><button class="rf-pp-btn" id="popupDetalleFirstHref"></button></div><div class="rf-pp-cntr " id="popupDetalle_container" style="position: fixed; z-index:100; "><div class="rf-pp-shdw" id="popupDetalle_shadow"></div><div class="rf-pp-hdr " id="popupDetalle_header"><div class="rf-pp-hdr-cnt" id="popupDetalle_header_content"></div></div><div class="rf-pp-hdr-cntrls " id="popupDetalle_header_controls"><a href="#" onclick="RichFaces.$('popupDetalle').hide(); return false;">X</a></div><div class="rf-pp-cnt-scrlr" id="popupDetalle_content_scroller"><div class="rf-pp-cnt" id="popupDetalle_content"><table width="100%">
+<tbody>
+<tr>
+<td>
+<form id="frmDetalle" name="frmDetalle" method="post" action="/jurisprudenciaweb/faces/page/resolucion-busqueda-resultado.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="frmDetalle" value="frmDetalle" />
+<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-7812701986250177338:-2566782331616547113" autocomplete="off" />
+</form></td>
+</tr>
+</tbody>
+</table>
+</div></div></div><script type="text/javascript">new RichFaces.ui.PopupPanel("popupDetalle",{"autosized":true} );</script></div><div id="panelStatus" style="visibility: hidden;"><div class="rf-pp-shade" id="panelStatus_shade" style="z-index:100;"><button class="rf-pp-btn" id="panelStatusFirstHref"></button></div><div class="rf-pp-cntr " id="panelStatus_container" style="position: fixed; z-index:100; "><div class="rf-pp-shdw" id="panelStatus_shadow"></div><div class="rf-pp-cnt-scrlr" id="panelStatus_content_scroller"><div class="rf-pp-cnt" id="panelStatus_content"><table>
 <tbody>
 <tr>
 <td><img src="../imagen/progressbar.gif" style="border: 0px" /></td>
@@ -89,11 +922,212 @@ http://jurisprudencia.pj.gob.pe/jurisprudenciaweb/faces/page/resolucion-busqueda
 </tr>
 </tbody>
 </table>
-</div></div></div><script type="text/javascript">new RichFaces.ui.PopupPanel("formBusqueda:panelStatus",{"autosized":true} );</script></div>
-				
-				<script language="javascript">
+</div></div></div><script type="text/javascript">new RichFaces.ui.PopupPanel("panelStatus",{"autosized":true} );</script></div><span id="j_idt286" style="display: none;"><script type="text/javascript">onChangeValue=function(property,value){RichFaces.ajax("j_idt286",null,{"parameters":{"property":property,"value":value} ,"incId":"1"} )};</script></span><div id="popupDetalle2" style="visibility: hidden;"><div class="rf-pp-shade" id="popupDetalle2_shade" style="z-index:100;"><button class="rf-pp-btn" id="popupDetalle2FirstHref"></button></div><div class="rf-pp-cntr " id="popupDetalle2_container" style="position: fixed; z-index:100; "><div class="rf-pp-shdw" id="popupDetalle2_shadow"></div><div class="rf-pp-hdr " id="popupDetalle2_header"><div class="rf-pp-hdr-cnt" id="popupDetalle2_header_content"><span id="cabeceraDetalle"></span></div></div><div class="rf-pp-hdr-cntrls " id="popupDetalle2_header_controls"><a href="#" onclick="RichFaces.$('popupDetalle2').hide(); return false;">X</a></div><div class="rf-pp-cnt-scrlr" id="popupDetalle2_content_scroller"><div class="rf-pp-cnt" id="popupDetalle2_content"><table width="100%">
+<tbody>
+<tr>
+<td>
+<form id="frmDetalle2" name="frmDetalle2" method="post" action="/jurisprudenciaweb/faces/page/resolucion-busqueda-resultado.xhtml" enctype="application/x-www-form-urlencoded" target="_blank">
+<input type="hidden" name="frmDetalle2" value="frmDetalle2" />
+ 
+		           <table width="100%">
+		           <tr>
+		             <td width="50%"> </td>
+		             <td width="50%"></td>
+		           </tr>	
+                     <tr class="alisup">
+                       <td class="linverder500">
+                           <table width="100%">
+	                     <tr>
+	                       <td width="3%"></td>
+	                       <td width="30%"></td>
+	                       <td width="67%"></td>
+	                        </tr>
+	                     	<tr>
+		                       <td align="left" height="30px" colspan="3"><b><span class="data">Datos de la Resolución:</span></b></td>
+	                     </tr>
+	                     <tr>
+                        		<td></td>
+                               <td align="left" height="30px"><span class="data">Fecha de la Resolución:</span></td>
+                               <td align="left"><span id="frmDetalle2:fechaResol" class="data"></span>
+                               </td>
+                         </tr>
+                         <tr>
+                        		<td></td>
+                               <td align="left" height="30px"><span class="data">Tipo de Resolución:</span></td>
+                               <td align="left"><span id="frmDetalle2:tipResol" class="data"></span>
+                               </td>
+                         </tr>
+                          <tr>
+                        		<td></td>
+                               <td align="left" height="30px"><span class="data">Fallo/Sentido de la Resolución:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                         <tr>
+                        		<td></td>
+                               <td align="left" height="30px"><span class="data">Juez Ponente:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                                                  <tr>
+                        		<td></td>
+                               <td align="left" height="30px" valign="top"><span class="data">Jueces Supremos:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                     	<tr>
+                         <td></td>
+	                       <td align="left" height="30px" valign="top"><span class="data">Sumilla:</span></td>
+	                       <td align="left" style="text-align:justify;"><span id="frmDetalle2:sumDetalle"></span></td>
+                     </tr>
+                     <tr>
+                        		<td></td>
+                               <td align="left" height="30px"><span class="data">Norma de Derecho Interno:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                     <tr>
+                        		<td></td>
+                               <td align="left" height="30px"><span class="data">Jurisprudencia Nacional/Acuerdo Plenario:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                         <tr>
+                        		<td></td>
+                               <td align="left" height="30px"><span class="data">Norma de Derecho Internacional:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                         <tr>
+                        		<td></td>
+                               <td align="left" height="30px"><span class="data">Caso de Jursiprudencia Internacional:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                      <tr>
+                        		<td></td>
+                               <td align="left" height="30px"><span class="data">Organismo Emisor de Jursiprudencia Internacional:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                         <tr>
+                        		<td></td>
+                               <td align="left" height="30px"><span class="data">Palabras Clave:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                         <tr>
+                        		<td></td>
+                               <td align="left" height="30px"><span class="data">Relevante:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                         <tr>
+                        		<td></td>
+                               <td align="left" height="30px"><span class="data">Vinculante:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                         <tr>
+                        		<td></td>
+                               <td align="left" height="30px"><span class="data">Fecha de Publicación en El Peruano:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                   	</table>
+                   	
+                    </td>
+                    <td>
+                    	 <table width="100%">
+	                     <tr>
+	                     	<td width="2%"></td>
+	                       <td width="3%"></td>
+	                       <td width="30%"></td>
+	                       <td width="65%"></td>
+	                     </tr>
+	                     <tr>
+	                     		<td> </td>
+		                       <td align="left" height="30px" colspan="3"><b><span class="data">Datos del Proceso:</span></b></td>
+	                     </tr>
+                         <tr>
+                        		<td colspan="2"></td>
+                               <td align="left" height="30px"><span class="data">Sala:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                         <tr>
+                        		<td colspan="2"></td>
+                               <td align="left" height="30px"><span class="data">Distrito Judicial de Procedencia:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                         <tr>
+                        		<td colspan="2"></td>
+                               <td align="left" height="30px"><span class="data">Especialidad:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                         <tr>
+	                     		<td colspan="2"></td>
+		                       <td align="left" height="30px" valign="top"><span class="data">Materia de la Causa:</span>
+		                         
+		                       </td>
+		                       <td align="left"><span class="data"></span>
+                    	</td>
+                     </tr>
+                         <tr>
+	                     		<td colspan="2"></td>
+		                       <td align="left" height="30px" valign="top"><span class="data">Pretensión/Delito:</span>
+		                         
+		                       </td>
+		                       <td align="left"><span class="data"></span>
+                    	</td>
+                     </tr>
+                         <tr>
+                        		<td colspan="2"></td>
+                               <td align="left" height="30px"><span class="data">Régimen Procesal:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                         <tr>
+                        		<td colspan="2"></td>
+                               <td align="left" height="30px"><span class="data">Tipo de Proceso:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+                         <tr>
+                        		<td colspan="2"></td>
+                               <td align="left" height="30px"><span class="data">N° de Expediente de la Sala Superior:</span></td>
+                               <td align="left"><span class="data"></span>
+                               </td>
+                         </tr>
+ 						<tr>
+                        		<td colspan="2"></td>
+                               <td align="left" height="30px"><span class="data">Archivo de la Resolución: </span></td>
+                               <td align="left"><input type="image" src="../imagen/inter1-pdf.gif" name="frmDetalle2:j_idt388" style="display:block;width:120px;height:40px;" />
+                               </td>
+                         </tr>
+                    	</table>
+                       
+                       </td>
+                     </tr>
+		           </table><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-7812701986250177338:-2566782331616547113" autocomplete="off" />
+</form></td>
+</tr>
+</tbody>
+</table>
+</div></div></div><script type="text/javascript">new RichFaces.ui.PopupPanel("popupDetalle2",{"autosized":true} );</script></div><span id="j_idt390" style="display: none;"><script type="text/javascript">mostrarres=function(uuid){RichFaces.ajax("j_idt390",null,{"parameters":{"uuid":uuid} ,"incId":"1"} )};</script></span>
+
+			<script language="javascript">
+
+			function mostrarresol() {
+				alert('ok');
+				mostrarres('4e34cde5-6c4f-4e1d-ad71-abe331157750');
+			}
+			
 			$(document).ready(function() {
 				$('input[type="text"]').each(function(){
+					if($(this).attr('id')=='j_idt17:buBusqueda'){
 				    	this.value = $(this).attr('title');
 				    	$(this).addClass('text-label');
 						 
@@ -110,13 +1144,12 @@ http://jurisprudencia.pj.gob.pe/jurisprudenciaweb/faces/page/resolucion-busqueda
 					            $(this).addClass('text-label');
 					        }
 					    });
+					}
 				});
 				});
-
-	    	</script><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="4320347190643838649:-7636793292745222701" autocomplete="off" />
-</form><span id="j_idt40" style="display: none;"><script type="text/javascript">limpiar=function(){RichFaces.ajax("j_idt40",null,{"incId":"1"} )};</script></span>
-	    	<script language="javascript">
-	    		limpiar();
+			function mostrar() {
+				window.open('../','','width=1000,height=700,left=50,top=50,toolbar=yes');
+			}
 	    	</script>
 				</td>
 			</tr>
@@ -146,4 +1179,4 @@ http://jurisprudencia.pj.gob.pe/jurisprudenciaweb/faces/page/resolucion-busqueda
 new RichFaces.ui.Message("j_idt9",{"isMessages":true} )
 });
 </script></body>
-</html>
+</html> <br><br>

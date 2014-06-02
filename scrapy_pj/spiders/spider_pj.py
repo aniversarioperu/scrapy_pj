@@ -28,32 +28,16 @@ class Search_PJ(Spider):
                 meta={'dont_merge_cookies': True},
                 cookies=self.mycookies,
         )]
-        """
         print response.headers
         cookieJar = response.meta.setdefault('cookie_jar', CookieJar())
         cookieJar.extract_cookies(response, response.request)
         request = FormRequest(url=self.start_urls[0],
             formdata={
-                'formBusqueda:buNoExpediente': '000001-2013',
+                 'formBusqueda:buEspecialidadInput': 'Civil',
+                 'formBusqueda:buAnioInput':'2013',
                 },
-            #cookies={'JSESSIONID': str(mycookie.value)},
-            meta={'dont_merge_cookies': True, 'cookie_jar': cookieJar},
-            callback=self.after_search)
-        print "<br><br>---<br>"
-        print request.url, "<br>"
-        print request.callback, "<br>"
-        print request.method, "<br>"
-        print request.meta, "<br>"
-        print request.body, "<br>"
-        print request.headers, "<br>"
-        print request.cookies, "<br>"
-        print request.encoding, "<br>"
-        print request.priority, "<br>"
-        print request.dont_filter, "<br>"
-        print request.errback, "<br>"
-        cookieJar.add_cookie_header(request)
-        yield request
-        """
+            cookies=[{'name':'JSESSIONID', 'value': 'S99PW04VLX~zc+5l2lit5jlYB1zBNQvvYYy.86439558-da66-3a1b-af8b-0355e5d4e948'}],
+            callback=self.after_search)]
 
     def after_search(self, response):
         print "<br>response.body", response.body
