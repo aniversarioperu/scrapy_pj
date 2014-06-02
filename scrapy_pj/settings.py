@@ -28,6 +28,8 @@ DOWNLOADER_MIDDLEWARES = {
          'scrapy_pj.middlewares.RandomUserAgentMiddleware': 400,
          'scrapy_pj.middlewares.ProxyMiddleware': 410,
          'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None,
-         'scrapy.contrib.downloadermiddleware.cookies.CookiesMiddleware': 'COOKIES_ENABLED',
+         'scrapy.contrib.downloadermiddleware.cookies.CookiesMiddleware': 700,
     # Disable compression middleware, so the actual HTML pages are cached
 }
+COOKIES_ENABLED = True
+COOKIES_DEBUG = True

@@ -13,16 +13,14 @@ class Search_PJ(Spider):
     ]
 
     def parse(self, response):
-        #cookieJar = response.meta.setdefault('cookie_jar', CookieJar())
-        #cookieJar.extract_cookies(response, response.request)
-        #mycookie = cookieJar._cookies['jurisprudencia.pj.gob.pe']['/jurisprudenciaweb']['JSESSIONID']
-        #print mycookie.value
+        cookieJar = response.meta.setdefault('cookie_jar', CookieJar())
+        cookieJar.extract_cookies(response, response.request)
+        mycookie = cookieJar._cookies['jurisprudencia.pj.gob.pe']['/jurisprudenciaweb']['JSESSIONID']
         return [FormRequest(url=self.start_urls[0],
             formdata={
                 'formBusqueda:buEspecialidadInput': 'Civil',
                 'formBusqueda:buAnioInput':'2013',
                 },
-            cookies={'JSESSIONID': 'S99PW04VLX~iJc7420lAKGkosSl3XVDJ1H5.a0c2e3f5-7bb5-3b43-be3f-aceabf94c2c1'},
             callback=self.after_search)
             ]
 
