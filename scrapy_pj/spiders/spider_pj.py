@@ -6,7 +6,6 @@ from scrapy.spider import Spider
 from scrapy.selector import Selector
 from scrapy.http import FormRequest
 from scrapy.http import Request
-from scrapy.http.cookies import CookieJar
 
 
 class Search_PJ(Spider):
