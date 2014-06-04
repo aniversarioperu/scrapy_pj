@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import json
 import re
 import sys
@@ -6,12 +7,16 @@ from scrapy.spider import Spider
 from scrapy.selector import Selector
 from scrapy.http import FormRequest
 from scrapy.http import Request
+from scrapy_pj.items import ScrapyPjItem
 
 
 class Search_PJ(Spider):
     name = "search_pj"
     allowed_domains = ["jurisprudencia.pj.gob.pe"]
     target_url = "http://jurisprudencia.pj.gob.pe/jurisprudenciaweb/faces/page/resolucion-busqueda-general.xhtml"
+
+    def __init__(self, expediente=''):
+        self.expediente = expediente
 
     def start_requests(self):
         yield Request(self.target_url,  callback=self.parse)
@@ -23,7 +28,7 @@ class Search_PJ(Spider):
                 'formBusqueda': 'formBusqueda',
                 'formBusqueda:txtBusqueda': 'Ingrese el texto a buscar',
                 'formBusqueda:cmbCorte': '',
-                'formBusqueda:buNroExpediente': '000001-2013',
+                'formBusqueda:buNroExpediente': self.expediente,
                 'javax.faces.source': 'formBusqueda:j_idt30',
                 'forward': 'buscar',
                 'formBusqueda:j_idt32': '21',
@@ -38,43 +43,49 @@ class Search_PJ(Spider):
         sel = Selector(response)
         ls = sel.xpath('//input[starts-with(@value, "Ver Resolu")]').extract()
         patt = "(formBusqueda:repeat:[0-9]+:j_idt[0-9]+).+uuid\W+((\w+-)+\w+)"
+        items = []
         for l in ls:
             res = re.search(patt, l).groups()
             if res:
                 idt = res[0]
                 uuid = res[1]
+                item = ScrapyPjItem()
+                item['j_idt'] = idt
+                item['uuid'] = uuid
+                item['expediente'] = self.expediente
+                items.append(item)
+                print item
                 print idt, uuid, "<br>"
+        return items
         #print "<br>response.body", response.body
 
 
 
 # post request to download PDF file
-"""
-formBusqueda=formBusqueda
-formBusqueda:buCorte=
-formBusqueda:j_idt25-value=j_idt26
-formBusqueda:buEspecialidad=0
-formBusqueda:buEspecialidadInput=-- Todos --
-formBusqueda:buPretensionValue=
-formBusqueda:buPretensionInput=
-formBusqueda:buPalabraClaveValue=
-formBusqueda:buPalabraClaveInput=
-formBusqueda:buSala=0
-formBusqueda:buSalaInput=-- Todos --
-formBusqueda:buTipoRecurso=0
-formBusqueda:buTipoRecursoInput=-- Todos --
-formBusqueda:buTipoResolucion=0
-formBusqueda:buTipoResolucionInput=-- Todos --
-formBusqueda:buAnio=
-formBusqueda:buAnioInput=-- Seleccione --
-formBusqueda:txtBusqueda=
-formBusqueda:buOrden=21
-formBusqueda:buOrdenInput=Fecha Resolución
-formBusqueda:buOrdenForma=ASC
-formBusqueda:buOrdenFormaInput=Ascendente
-formBusqueda:buPaginas=10
-formBusqueda:buPaginasInput=10 resultados
-javax.faces.ViewState=-697870706530378361:6617078509790886010
-formBusqueda:repeat:0:j_idt158=formBusqueda:repeat:0:j_idt158
-uuid=47cd6b37-8c7b-4cd0-b46a-adb4755bb161
-"""
+# formBusqueda=formBusqueda
+# formBusqueda:buCorte=
+# formBusqueda:j_idt25-value=j_idt26
+# formBusqueda:buEspecialidad=0
+# formBusqueda:buEspecialidadInput=-- Todos --
+# formBusqueda:buPretensionValue=
+# formBusqueda:buPretensionInput=
+# formBusqueda:buPalabraClaveValue=
+# formBusqueda:buPalabraClaveInput=
+# formBusqueda:buSala=0
+# formBusqueda:buSalaInput=-- Todos --
+# formBusqueda:buTipoRecurso=0
+# formBusqueda:buTipoRecursoInput=-- Todos --
+# formBusqueda:buTipoResolucion=0
+# formBusqueda:buTipoResolucionInput=-- Todos --
+# formBusqueda:buAnio=
+# formBusqueda:buAnioInput=-- Seleccione --
+# formBusqueda:txtBusqueda=
+# formBusqueda:buOrden=21
+# formBusqueda:buOrdenInput=Fecha Resolución
+# formBusqueda:buOrdenForma=ASC
+# formBusqueda:buOrdenFormaInput=Ascendente
+# formBusqueda:buPaginas=10
+# formBusqueda:buPaginasInput=10 resultados
+# javax.faces.ViewState=-697870706530378361:6617078509790886010
+# formBusqueda:repeat:0:j_idt158=formBusqueda:repeat:0:j_idt158
+# uuid=47cd6b37-8c7b-4cd0-b46a-adb4755bb161
