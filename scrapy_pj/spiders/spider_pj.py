@@ -50,5 +50,31 @@ class Search_PJ(Spider):
 
 # post request to download PDF file
 """
-        formBusqueda=formBusqueda&formBusqueda%3AbuCorte=&formBusqueda%3Aj_idt25-value=j_idt26&formBusqueda%3AbuEspecialidad=0&formBusqueda%3AbuEspecialidadInput=--+Todos+--&formBusqueda%3AbuPretensionValue=&formBusqueda%3AbuPretensionInput=&formBusqueda%3AbuPalabraClaveValue=&formBusqueda%3AbuPalabraClaveInput=&formBusqueda%3AbuSala=0&formBusqueda%3AbuSalaInput=--+Todos+--&formBusqueda%3AbuTipoRecurso=0&formBusqueda%3AbuTipoRecursoInput=--+Todos+--&formBusqueda%3AbuTipoResolucion=0&formBusqueda%3AbuTipoResolucionInput=--+Todos+--&formBusqueda%3AbuAnio=&formBusqueda%3AbuAnioInput=--+Seleccione+--&formBusqueda%3AtxtBusqueda=&formBusqueda%3AbuOrden=21&formBusqueda%3AbuOrdenInput=Fecha+Resoluci%C3%B3n&formBusqueda%3AbuOrdenForma=ASC&formBusqueda%3AbuOrdenFormaInput=Ascendente&formBusqueda%3AbuPaginas=10&formBusqueda%3AbuPaginasInput=10+resultados&javax.faces.ViewState=-697870706530378361%3A6617078509790886010&formBusqueda%3Arepeat%3A0%3Aj_idt158=formBusqueda%3Arepeat%3A0%3Aj_idt158&uuid=47cd6b37-8c7b-4cd0-b46a-adb4755bb161
+formBusqueda=formBusqueda
+formBusqueda:buCorte=
+formBusqueda:j_idt25-value=j_idt26
+formBusqueda:buEspecialidad=0
+formBusqueda:buEspecialidadInput=-- Todos --
+formBusqueda:buPretensionValue=
+formBusqueda:buPretensionInput=
+formBusqueda:buPalabraClaveValue=
+formBusqueda:buPalabraClaveInput=
+formBusqueda:buSala=0
+formBusqueda:buSalaInput=-- Todos --
+formBusqueda:buTipoRecurso=0
+formBusqueda:buTipoRecursoInput=-- Todos --
+formBusqueda:buTipoResolucion=0
+formBusqueda:buTipoResolucionInput=-- Todos --
+formBusqueda:buAnio=
+formBusqueda:buAnioInput=-- Seleccione --
+formBusqueda:txtBusqueda=
+formBusqueda:buOrden=21
+formBusqueda:buOrdenInput=Fecha Resolución
+formBusqueda:buOrdenForma=ASC
+formBusqueda:buOrdenFormaInput=Ascendente
+formBusqueda:buPaginas=10
+formBusqueda:buPaginasInput=10 resultados
+javax.faces.ViewState=-697870706530378361:6617078509790886010
+formBusqueda:repeat:0:j_idt158=formBusqueda:repeat:0:j_idt158
+uuid=47cd6b37-8c7b-4cd0-b46a-adb4755bb161
 """
