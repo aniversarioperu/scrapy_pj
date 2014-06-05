@@ -54,38 +54,42 @@ class Search_PJ(Spider):
                 item['uuid'] = uuid
                 item['expediente'] = self.expediente
                 items.append(item)
-                print item
-                print idt, uuid, "<br>"
-        return items
-        #print "<br>response.body", response.body
 
+        for i in items:
+            return [FormRequest.from_response(
+                response,
+                formdata={
+                    'formBusqueda': 'formBusqueda',
+                    'formBusqueda:buCorte': '',
+                    'formBusqueda:j_idt25-value': 'j_idt26',
+                    'formBusqueda:buEspecialidad': '0',
+                    'formBusqueda:buEspecialidadInput': '-- Todos --',
+                    'formBusqueda:buPretensionValue': '',
+                    'formBusqueda:buPretensionInput': '',
+                    'formBusqueda:buPalabraClaveValue': '',
+                    'formBusqueda:buPalabraClaveInput': '',
+                    'formBusqueda:buSala': '0',
+                    'formBusqueda:buSalaInput': '-- Todos --',
+                    'formBusqueda:buTipoRecurso': '0',
+                    'formBusqueda:buTipoRecursoInput': '-- Todos --',
+                    'formBusqueda:buTipoResolucion': '0',
+                    'formBusqueda:buTipoResolucionInput': '-- Todos --',
+                    'formBusqueda:buAnio': '',
+                    'formBusqueda:buAnioInput': '-- Seleccione --',
+                    'formBusqueda:txtBusqueda': '',
+                    'formBusqueda:buOrden': '21',
+                    'formBusqueda:buOrdenInput': 'Fecha Resolución',
+                    'formBusqueda:buOrdenForma': 'ASC',
+                    'formBusqueda:buOrdenFormaInput': 'Ascendente',
+                    'formBusqueda:buPaginas': '10',
+                    'formBusqueda:buPaginasInput': '10 resultados',
+                    i['j_idt']: i['j_idt'],
+                    'uuid': i['uuid'],
+            },
+            # clickdata={'id': 'formBusqueda', },
+            callback=self.download_PDF,
+        )]
 
-
-# post request to download PDF file
-# formBusqueda=formBusqueda
-# formBusqueda:buCorte=
-# formBusqueda:j_idt25-value=j_idt26
-# formBusqueda:buEspecialidad=0
-# formBusqueda:buEspecialidadInput=-- Todos --
-# formBusqueda:buPretensionValue=
-# formBusqueda:buPretensionInput=
-# formBusqueda:buPalabraClaveValue=
-# formBusqueda:buPalabraClaveInput=
-# formBusqueda:buSala=0
-# formBusqueda:buSalaInput=-- Todos --
-# formBusqueda:buTipoRecurso=0
-# formBusqueda:buTipoRecursoInput=-- Todos --
-# formBusqueda:buTipoResolucion=0
-# formBusqueda:buTipoResolucionInput=-- Todos --
-# formBusqueda:buAnio=
-# formBusqueda:buAnioInput=-- Seleccione --
-# formBusqueda:txtBusqueda=
-# formBusqueda:buOrden=21
-# formBusqueda:buOrdenInput=Fecha Resolución
-# formBusqueda:buOrdenForma=ASC
-# formBusqueda:buOrdenFormaInput=Ascendente
-# formBusqueda:buPaginas=10
-# formBusqueda:buPaginasInput=10 resultados
-# javax.faces.ViewState=-697870706530378361:6617078509790886010
-# formBusqueda:repeat:0:j_idt158=formBusqueda:repeat:0:j_idt158
-# uuid=47cd6b37-8c7b-4cd0-b46a-adb4755bb161
+    def download_PDF(self, response):
+        # response.body is the PDF file
+        print response.body
