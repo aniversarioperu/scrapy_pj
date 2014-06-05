@@ -56,7 +56,7 @@ class Search_PJ(Spider):
                 items.append(item)
 
         for i in items:
-            return [FormRequest.from_response(
+            yield FormRequest.from_response(
                 response,
                 formdata={
                     'formBusqueda': 'formBusqueda',
@@ -88,8 +88,8 @@ class Search_PJ(Spider):
             },
             # clickdata={'id': 'formBusqueda', },
             callback=self.download_PDF,
-        )]
+        )
 
     def download_PDF(self, response):
         # response.body is the PDF file
-        print response.body
+        print response.headers
