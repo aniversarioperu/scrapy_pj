@@ -92,4 +92,8 @@ class Search_PJ(Spider):
 
     def download_PDF(self, response):
         # response.body is the PDF file
-        print response.headers
+        response_headers = response.headers['Content-Disposition']
+        res = re.search("(Resolucion.+.pdf)", response_headers)
+        if res:
+            filename = res.groups()[0].replace(" ", "_")
+            open(filename, "wb").write(response.body)
