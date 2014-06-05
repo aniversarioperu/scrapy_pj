@@ -1,24 +1,25 @@
+# About
 PJ has released thousands of veredicts from the Supreme Court. All are in PDF
-format (images, not text).
+format (images, not text). The only way to download is by using their website
+and download one by one, which is far from efficient. They don't offer
+downloads of documents in batches of more than 5.
 
-Scrape (scrapy? beautifulSoup?) to download documents from the Peruvian
-Judicial System:
+This project aims to be an efficient way to download the documents from the PJ
+website by scrapping their website using **scrapy**.
 
-* Go here <http://jurisprudencia.pj.gob.pe/jurisprudenciaweb/faces/page/resolucion-busqueda-general.xhtml>
-* POST to No Expediente: '000001-2013'
-* GET results. Get **idt** and **uuid** values for each result (from button 
+This software executes the steps 1 to 5:
+1. Go here <http://jurisprudencia.pj.gob.pe/jurisprudenciaweb/faces/page/resolucion-busqueda-general.xhtml>
+2. POST to No Expediente: '000001-2013'
+3. GET results. Get **idt** and **uuid** values for each result (from button 
   "Ver Resolución").
-* For each result, replace the **idt** and **uuid** in **their** javascript
+4. For each result, replace the **idt** and **uuid** in **their** javascript
   function to get the PDF:
-
-    * ``mojarra.jsfcljs(document.getElementById('formBusqueda'),{'formBusqueda:repeat:0:j_idt158':'formBusqueda:repeat:0:j_idt158','uuid':'47cd6b37-8c7b-4cd0-b46a-adb4755bb161'},'');``
-
-* OCR PDF
-* add to database
-* profit
+5. ``mojarra.jsfcljs(document.getElementById('formBusqueda'),{'formBusqueda:repeat:0:j_idt158':'formBusqueda:repeat:0:j_idt158','uuid':'47cd6b37-8c7b-4cd0-b46a-adb4755bb161'},'');``
+6. OCR PDF
+7. add to database
 
 # Set up Tor
-If using Ubuntu, add this line to ``/etc/apt/sources.list``:
+[Optional] If using Ubuntu, add this line to ``/etc/apt/sources.list``:
 
 ```bash
 deb http://deb.torproject.org/torproject.org saucy main
@@ -37,7 +38,18 @@ More info here <https://www.torproject.org/docs/tor-doc-unix.html.en#using>
 
 Install polipo, more info [here](http://pkmishra.github.io/blog/2013/03/18/how-to-run-scrapy-with-TOR-and-multiple-browser-agents-part-1-mac/).
 
-# Run scrapper this way
+# Install scrapy
+Assuming that you have Python 2.7+ isntalled in your computer:
+```bash
+pip install scrapy
+```
+
+# Clone this repository
+```bash
+git clone https://github.com/aniversarioperu/scrapy_pj.git
+```
+
+# Run the software
 ```bash
 scrapy crawl search_pj -a expediente=00001-2013 -t json -o output.json
 ```
