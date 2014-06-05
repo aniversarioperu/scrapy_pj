@@ -51,6 +51,7 @@ git clone https://github.com/aniversarioperu/scrapy_pj.git
 ```
 
 # Run the software
+Replace the "expediente" number for the one(s) that your wish to download:
 ```bash
 scrapy crawl search_pj -a expediente=00001-2013 -t json -o output.json
 ```
