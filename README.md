@@ -8,6 +8,7 @@ This project aims to be an efficient way to download the documents from the PJ
 website by scrapping their website using **scrapy**.
 
 This software executes the steps 1 to 5:
+
 1. Go here <http://jurisprudencia.pj.gob.pe/jurisprudenciaweb/faces/page/resolucion-busqueda-general.xhtml>
 2. POST to No Expediente: '000001-2013'
 3. GET results. Get **idt** and **uuid** values for each result (from button 
