@@ -41,3 +41,15 @@ Install polipo, more info [here](http://pkmishra.github.io/blog/2013/03/18/how-t
 ```bash
 scrapy crawl search_pj -a expediente=00001-2013 -t json -o output.json
 ```
+Expected output is a bunch of PDF files downloaded to current folder:
+
+```
+Resolucion_000001-2013-1390676516593.pdf
+Resolucion_000001-2013-1390773912770.pdf
+Resolucion_000001-2013-20140225102936000838852.pdf
+Resolucion_000001-2013-20140227102906000571555.pdf
+Resolucion_000001-2013-20140228170931000865573.pdf
+Resolucion_000001-2013-20140304171117000584898.pdf
+Resolucion_000001-2013-20140310115239000895619.pdf
+Resolucion_000001-2013-20140311151759000566176.pdf
+```
