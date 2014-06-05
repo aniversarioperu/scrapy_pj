@@ -36,3 +36,8 @@ apt-get install tor
 More info here <https://www.torproject.org/docs/tor-doc-unix.html.en#using>
 
 Install polipo, more info [here](http://pkmishra.github.io/blog/2013/03/18/how-to-run-scrapy-with-TOR-and-multiple-browser-agents-part-1-mac/).
+
+# Run scrapper this way
+```bash
+scrapy crawl search_pj -a expediente=00001-2013 -t json -o output.json
+```
