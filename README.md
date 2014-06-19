@@ -1,5 +1,5 @@
 # About
-The Justice Department in Peru (*Poder Judicial*, PJ) in Peru has released
+The Justice Department in Peru (*Poder Judicial*, PJ) has released
 thousands of veredicts from the Supreme Court. All are in PDF
 format (images, not text). The only way to download is by using their website
 and download one by one, which is far from efficient. They don't offer
