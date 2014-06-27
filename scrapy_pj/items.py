@@ -5,9 +5,11 @@
 
 from scrapy.item import Item, Field
 
+
 class ScrapyPjItem(Item):
     # define the fields for your item here like:
     # name = Field()
     j_idt = Field()
     uuid = Field()
     expediente = Field()
+    downloaded_file = Field()

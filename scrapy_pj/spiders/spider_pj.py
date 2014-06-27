@@ -13,7 +13,8 @@ from scrapy_pj.items import ScrapyPjItem
 class Search_PJ(Spider):
     name = "search_pj"
     allowed_domains = ["jurisprudencia.pj.gob.pe"]
-    target_url = "http://jurisprudencia.pj.gob.pe/jurisprudenciaweb/faces/page/resolucion-busqueda-general.xhtml"
+    target_url = "http://jurisprudencia.pj.gob.pe/jurisprudenciaweb/"
+    target_url += "faces/page/resolucion-busqueda-general.xhtml"
 
     def __init__(self, expediente=''):
         self.expediente = expediente
@@ -85,15 +86,29 @@ class Search_PJ(Spider):
                     'formBusqueda:buPaginasInput': '10 resultados',
                     i['j_idt']: i['j_idt'],
                     'uuid': i['uuid'],
-            },
-            # clickdata={'id': 'formBusqueda', },
-            callback=self.download_PDF,
-        )
+                },
+                # clickdata={'id': 'formBusqueda', },
+                callback=self.download_PDF,
+                meta={
+                    'j_idt': item['j_idt'],
+                    'uuid': item['uuid'],
+                    'expediente': item['expediente'],
+                }
+            )
 
     def download_PDF(self, response):
+        meta = response.meta
+
         # response.body is the PDF file
         response_headers = response.headers['Content-Disposition']
         res = re.search("(Resolucion.+.pdf)", response_headers)
         if res:
             filename = res.groups()[0].replace(" ", "_")
             open(filename, "wb").write(response.body)
+            item = ScrapyPjItem(
+                j_idt=meta['j_idt'],
+                uuid=meta['uuid'],
+                expediente=meta['expediente'],
+                downloaded_file=filename,
+            )
+            return item
