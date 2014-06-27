@@ -1,0 +1,2 @@
+scrapy==0.24.0
+service_identity==1.0.0
